@@ -1,0 +1,594 @@
+{
+  "conference": {
+    "name": "Qiskit Fall Fest RGUKT 2025",
+    "location": "RGUKT Srikakulam, India",
+    "dates": "October 21 - October 27, 2025",
+    "theme": "Quantum India: Bridging Theory to Reality",
+    "days": [
+      {
+        "date": "2025-10-21",
+        "day": "Day 1",
+        "title": "Grand Inauguration @ RGUKT Srikakulam",
+        "theme": "Quantum India: Bridging Theory to Reality",
+        "sessions": [
+          {
+            "id": 1,
+            "time": "9:00 AM - 10:00 AM",
+            "title": "Registration & Welcome",
+            "type": "registration",
+            "location": "Main Auditorium",
+            "description": "Participant check-in, distribution of welcome kits, networking over refreshments.",
+            "level": "All",
+            "prerequisites": [],
+            "learningOutcomes": [
+              "Orientation with event structure",
+              "Meet peers and mentors"
+            ],
+            "resources": ["Event Handbook", "Hackathon Guidelines"],
+            "speakers": [],
+            "notes": "Mandatory for all participants."
+          },
+          {
+            "id": 2,
+            "time": "10:00 AM - 10:30 AM",
+            "title": "Opening Ceremony",
+            "type": "ceremony",
+            "location": "Main Auditorium",
+            "description": "Formal inauguration with keynote messages and global connection to Qiskit Fall Fest.",
+            "level": "All",
+            "prerequisites": [],
+            "learningOutcomes": [
+              "Understand event vision",
+              "Connect with global Fall Fest community"
+            ],
+            "resources": ["https://qiskit.org/events/fall-fest/"],
+            "speakers": ["RGUKT Chancellor", "IBM Quantum Representative"],
+            "subSessions": [
+              {
+                "id": "2a",
+                "time": "10:00 AM - 10:10 AM",
+                "title": "Welcome by RGUKT Leadership",
+                "description": "Opening remarks and introduction by university leadership."
+              },
+              {
+                "id": "2b",
+                "time": "10:10 AM - 10:20 AM",
+                "title": "IBM Quantum Keynote",
+                "description": "Keynote from IBM Quantum representative on global roadmap."
+              },
+              {
+                "id": "2c",
+                "time": "10:20 AM - 10:30 AM",
+                "title": "Qiskit Fall Fest Global Connection",
+                "description": "Live connection to international community of Qiskit events."
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "time": "10:30 AM - 12:00 PM",
+            "title": "Keynote: Quantum Computing - The Next Frontier",
+            "type": "keynote",
+            "location": "Main Auditorium",
+            "description": "A keynote introducing the real-world impact of quantum computing across industries and academia.",
+            "level": "All",
+            "prerequisites": ["Basic awareness of computers"],
+            "learningOutcomes": [
+              "Understand global trends in quantum research",
+              "Identify potential applications in India",
+              "Appreciate the multidisciplinary nature of quantum"
+            ],
+            "resources": ["https://research.ibm.com/quantum"],
+            "speakers": ["Dr. L. V. Subramaniam (IBM Quantum)"],
+            "notes": "Recommended for all hackathon participants."
+          },
+          {
+            "id": 4,
+            "time": "1:00 PM - 2:30 PM",
+            "title": "Panel: Quantum Technologies in Indian Context",
+            "type": "panel",
+            "location": "Main Auditorium",
+            "description": "Panel discussion highlighting quantum research in India and the roadmap for innovation.",
+            "level": "All",
+            "prerequisites": [],
+            "learningOutcomes": [
+              "Awareness of India's National Quantum Mission",
+              "Identify collaboration opportunities between academia and industry"
+            ],
+            "resources": ["https://dst.gov.in/national-quantum-mission"],
+            "speakers": [
+              "Faculty - RGUKT Nuzvid",
+              "Faculty - RGUKT RK Valley",
+              "Industry Expert (TCS Quantum Lab)"
+            ],
+            "notes": "Interactive Q&A included."
+          },
+          {
+            "id": 5,
+            "time": "2:45 PM - 4:15 PM",
+            "title": "Lecture: Introduction to Qiskit & IBM Quantum",
+            "type": "workshop",
+            "location": "Main Auditorium",
+            "description": "Hands-on introduction to IBM Quantum cloud and Qiskit framework.",
+            "level": "Beginner",
+            "prerequisites": ["Basic Python"],
+            "learningOutcomes": [
+              "Install and set up Qiskit",
+              "Run first circuits on IBM Quantum simulator",
+              "Access IBM Quantum Lab"
+            ],
+            "resources": [
+              "https://qiskit.org/",
+              "https://quantum-computing.ibm.com/lab"
+            ],
+            "speakers": ["IBM Quantum Educator"],
+            "notes": "Bring laptops with Python installed."
+          },
+          {
+            "id": 6,
+            "time": "4:30 PM - 5:30 PM",
+            "title": "Community Meetup - RGUKT Quantum Club Launch",
+            "type": "ceremony",
+            "location": "Main Auditorium",
+            "description": "Launch of RGUKT Quantum Club with a vision statement and first student chapter introduction.",
+            "level": "All",
+            "prerequisites": [],
+            "learningOutcomes": [
+              "Introduction to Quantum Club activities",
+              "Pathways for student leadership"
+            ],
+            "resources": [],
+            "speakers": ["Student Coordinators", "Faculty Advisors"],
+            "notes": "Membership registration opens."
+          },
+          {
+            "id": 7,
+            "time": "6:00 PM - 7:00 PM",
+            "title": "Campus Showcase",
+            "type": "presentation",
+            "location": "Main Auditorium",
+            "description": "Each RGUKT campus presents their quantum specialization areas and student projects.",
+            "level": "All",
+            "prerequisites": [],
+            "learningOutcomes": [
+              "Know campus strengths",
+              "Foster inter-campus collaboration"
+            ],
+            "resources": [],
+            "speakers": ["Campus Student Teams"],
+            "notes": "Part of inter-campus collaboration initiative."
+          },
+          {
+            "id": 8,
+            "time": "7:00 PM - 8:00 PM",
+            "title": "Networking & Cultural Program",
+            "type": "social",
+            "location": "Main Auditorium",
+            "description": "Evening networking session with cultural performances blending arts and science.",
+            "level": "All",
+            "prerequisites": [],
+            "learningOutcomes": [
+              "Build connections",
+              "Appreciate cultural exchange"
+            ],
+            "resources": [],
+            "speakers": ["Student Performers"],
+            "notes": "Open to all participants and faculty."
+          }
+        ]
+      },
+      {
+        "date": "2025-10-22",
+        "day": "Day 2",
+        "title": "Foundations Day",
+        "theme": "Quantum Computing Fundamentals",
+        "sessions": [
+          {
+            "id": 9,
+            "time": "9:00 AM - 12:00 PM",
+            "title": "Quantum 101 and Qiskit 101",
+            "type": "workshop",
+            "location": "Main Auditorium",
+            "description": "Morning workshop covering core quantum concepts and Qiskit installation/setup.",
+            "level": "Beginner",
+            "prerequisites": [
+              "Basic Python knowledge",
+              "Linear algebra basics"
+            ],
+            "learningOutcomes": [
+              "Understand qubits and superposition",
+              "Differentiate classical vs quantum computing",
+              "Set up Qiskit environment",
+              "Build first circuits with simple gates"
+            ],
+            "resources": [
+              "https://qiskit.org/textbook",
+              "https://learning.quantum-computing.ibm.com/"
+            ],
+            "speakers": ["Dr. Rakesh Sharma (RGUKT)", "IBM Quantum Educator"],
+            "notes": "Certification quiz at end of session."
+          },
+          {
+            "id": 10,
+            "time": "1:00 PM - 5:00 PM",
+            "title": "Beginner Notebook Session",
+            "type": "workshop",
+            "location": "Main Auditorium",
+            "description": "Hands-on coding with beginner-level quantum notebooks.",
+            "level": "Beginner",
+            "prerequisites": ["Completed Quantum 101 session"],
+            "learningOutcomes": [
+              "Execute quantum teleportation",
+              "Create entangled Bell states",
+              "Simulate quantum measurement",
+              "Run basic quantum algorithms"
+            ],
+            "resources": [
+              "https://qiskit.org/documentation/",
+              "Sample GitHub notebooks"
+            ],
+            "speakers": ["IBM Qiskit Advocate", "Student Mentors"],
+            "notes": "Mandatory for hackathon participants selecting beginner-level challenges."
+          }
+        ]
+      },
+      {
+        "date": "2025-10-23",
+        "day": "Day 3",
+        "title": "Intermediate Day",
+        "theme": "Quantum Algorithms & Machine Learning",
+        "sessions": [
+          {
+            "id": 11,
+            "time": "9:00 AM - 12:00 PM",
+            "title": "Quantum Algorithms Workshop",
+            "type": "workshop",
+            "location": "Main Auditorium",
+            "description": "Implementation of foundational algorithms in Qiskit.",
+            "level": "Intermediate",
+            "prerequisites": [
+              "Basic Qiskit knowledge",
+              "Linear algebra",
+              "Quantum gates"
+            ],
+            "learningOutcomes": [
+              "Implement Grover's algorithm",
+              "Understand Shor's algorithm basics",
+              "Use Quantum Fourier Transform",
+              "Apply algorithms to small problems"
+            ],
+            "resources": ["https://qiskit.org/textbook/ch-algorithms"],
+            "speakers": ["IBM Quantum Researcher", "Qiskit Advocate"],
+            "notes": "Bring laptops with Qiskit installed."
+          },
+          {
+            "id": 12,
+            "time": "1:00 PM - 2:30 PM",
+            "title": "Quantum Machine Learning Workshop",
+            "type": "workshop",
+            "location": "Main Auditorium",
+            "description": "Introduction to quantum machine learning and variational algorithms.",
+            "level": "Intermediate",
+            "prerequisites": [
+              "Machine learning basics",
+              "Quantum gates knowledge"
+            ],
+            "learningOutcomes": [
+              "Understand variational algorithms",
+              "Implement simple QML models",
+              "Run VQE and QNN examples"
+            ],
+            "resources": [
+              "https://qiskit.org/documentation/machine-learning/",
+              "IBM Quantum Learning Hub"
+            ],
+            "speakers": ["Dr. Ananya Bose (IISc)", "IBM Researcher"],
+            "notes": "Useful for hackathon teams focusing on ML."
+          },
+          {
+            "id": 13,
+            "time": "2:45 PM - 5:00 PM",
+            "title": "Intermediate Notebook Session",
+            "type": "workshop",
+            "location": "Main Auditorium",
+            "description": "Hands-on coding for intermediate notebooks including QML and optimization.",
+            "level": "Intermediate",
+            "prerequisites": ["Completed Day 2 workshop"],
+            "learningOutcomes": [
+              "Run QML models on qBraid",
+              "Optimize quantum circuits",
+              "Test algorithms under noise"
+            ],
+            "resources": [
+              "https://qbraid.com/",
+              "Sample intermediate notebooks"
+            ],
+            "speakers": ["IBM Engineer", "RGUKT Mentor Team"],
+            "notes": "Qiskit notebooks will be provided."
+          }
+        ]
+      },
+      {
+        "date": "2025-10-24",
+        "day": "Day 4",
+        "title": "Advanced Day",
+        "theme": "Quantum Error Correction & Advanced Topics",
+        "sessions": [
+          {
+            "id": 14,
+            "time": "9:00 AM - 12:00 PM",
+            "title": "Quantum Error Correction & Noise",
+            "type": "workshop",
+            "location": "Main Auditorium",
+            "description": "Deep dive into error correction codes and noise mitigation strategies in quantum computing.",
+            "level": "Advanced",
+            "prerequisites": [
+              "Linear algebra",
+              "Intermediate Qiskit knowledge",
+              "Quantum algorithms understanding"
+            ],
+            "learningOutcomes": [
+              "Understand decoherence and noise models",
+              "Implement error correction codes in Qiskit",
+              "Apply error mitigation techniques"
+            ],
+            "resources": [
+              "https://qiskit.org/textbook/ch-quantum-hardware/error-correction-repetition-code.html",
+              "IBM Quantum documentation on noise"
+            ],
+            "speakers": ["IBM Quantum Hardware Scientist", "RGUKT Faculty"],
+            "notes": "This session is highly recommended for students interested in quantum hardware."
+          },
+          {
+            "id": 15,
+            "time": "1:00 PM - 2:30 PM",
+            "title": "Advanced Algorithms Workshop",
+            "type": "workshop",
+            "location": "Main Auditorium",
+            "description": "Exploration of advanced quantum algorithms for optimization and cryptography.",
+            "level": "Advanced",
+            "prerequisites": [
+              "Quantum Fourier Transform",
+              "Grover’s Algorithm"
+            ],
+            "learningOutcomes": [
+              "Implement Quantum Phase Estimation",
+              "Understand advanced cryptographic applications",
+              "Explore Variational Quantum Eigensolver"
+            ],
+            "resources": [
+              "https://qiskit.org/textbook/ch-algorithms/quantum-phase-estimation.html",
+              "Qiskit Optimization library"
+            ],
+            "speakers": ["IBM Quantum Algorithms Specialist"],
+            "notes": "Hands-on notebooks will be provided."
+          },
+          {
+            "id": 16,
+            "time": "2:45 PM - 5:00 PM",
+            "title": "Advanced Notebook Session",
+            "type": "workshop",
+            "location": "Main Auditorium",
+            "description": "Hands-on coding with advanced-level notebooks covering noise, mitigation, and optimization.",
+            "level": "Advanced",
+            "prerequisites": ["Day 3 Intermediate Notebook Session"],
+            "learningOutcomes": [
+              "Simulate noisy quantum circuits",
+              "Test error mitigation strategies",
+              "Optimize VQE under noise"
+            ],
+            "resources": [
+              "Sample GitHub advanced notebooks",
+              "https://qiskit.org/documentation/"
+            ],
+            "speakers": ["IBM Quantum Mentor", "RGUKT Advanced Team"],
+            "notes": "Notebooks will require IBM Quantum account access."
+          }
+        ]
+      },
+      {
+        "date": "2025-10-25",
+        "day": "Day 5",
+        "title": "Hackathon Kickoff",
+        "theme": "Quantum Innovation Challenge",
+        "sessions": [
+          {
+            "id": 17,
+            "time": "9:00 AM - 10:30 AM",
+            "title": "Hackathon Rules & Orientation",
+            "type": "ceremony",
+            "location": "Main Auditorium",
+            "description": "Introduction to hackathon guidelines, rules, and judging criteria.",
+            "level": "All",
+            "prerequisites": [],
+            "learningOutcomes": [
+              "Understand hackathon structure",
+              "Form teams and register challenges",
+              "Clarify submission process"
+            ],
+            "resources": ["Hackathon Handbook", "GitHub Repo Templates"],
+            "speakers": ["Organizing Committee", "IBM Mentor Team"],
+            "notes": "Mandatory for all hackathon participants."
+          },
+          {
+            "id": 18,
+            "time": "11:00 AM - 12:30 PM",
+            "title": "Team Formation & Mentorship Connect",
+            "type": "social",
+            "location": "Breakout Rooms",
+            "description": "Participants form teams, choose challenge tracks, and meet assigned mentors.",
+            "level": "All",
+            "prerequisites": ["Interest in hackathon participation"],
+            "learningOutcomes": [
+              "Team collaboration setup",
+              "Identify mentor contacts",
+              "Choose project domain"
+            ],
+            "resources": [],
+            "speakers": ["Student Coordinators", "IBM Mentors"],
+            "notes": "Teams must have 3–5 members."
+          },
+          {
+            "id": 19,
+            "time": "1:00 PM - 8:00 PM",
+            "title": "Hackathon Coding Sprint 1",
+            "type": "hackathon",
+            "location": "Computer Labs & Online IBM Quantum Lab",
+            "description": "First hackathon sprint with mentor check-ins.",
+            "level": "All",
+            "prerequisites": [
+              "Completed beginner/intermediate/advanced workshops"
+            ],
+            "learningOutcomes": [
+              "Kickstart project development",
+              "Apply Qiskit to real-world problem",
+              "Collaborate with team members"
+            ],
+            "resources": ["IBM Quantum Lab", "Hackathon GitHub Repositories"],
+            "speakers": ["Assigned Mentors"],
+            "notes": "Submit Day 1 progress on GitHub by 8 PM."
+          }
+        ]
+      },
+      {
+        "date": "2025-10-26",
+        "day": "Day 6",
+        "title": "Hackathon Continues",
+        "theme": "Build, Test & Refine",
+        "sessions": [
+          {
+            "id": 20,
+            "time": "9:00 AM - 12:00 PM",
+            "title": "Hackathon Coding Sprint 2",
+            "type": "hackathon",
+            "location": "Computer Labs",
+            "description": "Teams continue project development with mentors available for technical guidance.",
+            "level": "All",
+            "prerequisites": ["Registered Hackathon Teams"],
+            "learningOutcomes": [
+              "Enhance project features",
+              "Debug and refine code",
+              "Prepare mid-hackathon progress update"
+            ],
+            "resources": ["Qiskit Documentation", "IBM Quantum API"],
+            "speakers": ["Mentors", "Faculty Advisors"],
+            "notes": "Daily GitHub commit required."
+          },
+          {
+            "id": 21,
+            "time": "1:00 PM - 5:00 PM",
+            "title": "Hackathon Coding Sprint 3 + Mid Review",
+            "type": "hackathon",
+            "location": "Computer Labs",
+            "description": "Third coding sprint with mentor review checkpoints.",
+            "level": "All",
+            "prerequisites": [],
+            "learningOutcomes": [
+              "Receive mentor feedback",
+              "Implement corrections",
+              "Finalize core functionality"
+            ],
+            "resources": ["Mentor-provided resources"],
+            "speakers": ["IBM Quantum Engineers", "RGUKT Mentors"],
+            "notes": "Submit progress slides by 5 PM."
+          },
+          {
+            "id": 22,
+            "time": "6:00 PM - 8:00 PM",
+            "title": "Late Night Debugging & Peer Networking",
+            "type": "social",
+            "location": "Common Hall",
+            "description": "Collaborative debugging session where teams help each other.",
+            "level": "All",
+            "prerequisites": [],
+            "learningOutcomes": [
+              "Collaborative problem solving",
+              "Peer-to-peer learning"
+            ],
+            "resources": [],
+            "speakers": ["Student Peer Leaders"],
+            "notes": "Informal but highly encouraged."
+          }
+        ]
+      },
+      {
+        "date": "2025-10-27",
+        "day": "Day 7",
+        "title": "Hackathon Finale & Closing Ceremony",
+        "theme": "Showcase & Awards",
+        "sessions": [
+          {
+            "id": 23,
+            "time": "9:00 AM - 12:00 PM",
+            "title": "Final Hackathon Presentations",
+            "type": "presentation",
+            "location": "Main Auditorium",
+            "description": "Teams present their projects to judges and audience.",
+            "level": "All",
+            "prerequisites": ["Hackathon team participation"],
+            "learningOutcomes": [
+              "Develop presentation skills",
+              "Showcase quantum innovation",
+              "Receive feedback from experts"
+            ],
+            "resources": [],
+            "speakers": ["Hackathon Teams", "Judging Panel"],
+            "notes": "10-minute presentation per team."
+          },
+          {
+            "id": 24,
+            "time": "1:00 PM - 2:30 PM",
+            "title": "Judging & Deliberation",
+            "type": "jury",
+            "location": "Closed Room",
+            "description": "Judges evaluate projects on innovation, implementation, and impact.",
+            "level": "Jury only",
+            "prerequisites": [],
+            "learningOutcomes": ["Fair project evaluation"],
+            "resources": ["Hackathon Judging Rubric"],
+            "speakers": ["Judging Panel"],
+            "notes": "Not open to participants."
+          },
+          {
+            "id": 25,
+            "time": "3:00 PM - 4:30 PM",
+            "title": "Valedictory Ceremony & Awards",
+            "type": "ceremony",
+            "location": "Main Auditorium",
+            "description": "Closing ceremony with keynote, prize distribution, and feedback session.",
+            "level": "All",
+            "prerequisites": [],
+            "learningOutcomes": [
+              "Celebrate achievements",
+              "Understand next steps for quantum learning"
+            ],
+            "resources": [],
+            "speakers": [
+              "RGUKT Vice Chancellor",
+              "IBM Guest of Honor",
+              "Winning Teams"
+            ],
+            "notes": "Certificates will be distributed."
+          },
+          {
+            "id": 26,
+            "time": "5:00 PM - 7:00 PM",
+            "title": "Cultural Evening & Farewell Dinner",
+            "type": "social",
+            "location": "Main Auditorium & Dining Hall",
+            "description": "Cultural programs followed by farewell dinner to close the event.",
+            "level": "All",
+            "prerequisites": [],
+            "learningOutcomes": [
+              "Strengthen community bonds",
+              "Celebrate cultural diversity"
+            ],
+            "resources": [],
+            "speakers": ["Student Performers"],
+            "notes": "Open to all participants and guests."
+          }
+        ]
+      }
+    ]
+  }
+}

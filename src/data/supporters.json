@@ -1,0 +1,121 @@
+[
+  {
+    "id": 1,
+    "name": "Prof. K. Madhu Murthy",
+    "role": "Chief Patron; Hon'ble Chancellor, RGUKT-AP, Chairman, APSCHE",
+    "image": "/images/prof-k-madhu-murthy.jpg",
+    "linkedin": ""
+  },
+  {
+    "id": 2,
+    "name": "Prof. M. Vijaya Kumar",
+    "role": "Patron; Hon'ble Vice Chancellor, RGUKT-AP",
+    "image": "/images/prof-m-vijaya-kumar.jpg",
+    "linkedin": ""
+  },
+  {
+    "id": 3,
+    "name": "Dr. L. V. Subramaniam",
+    "role": "Patron; IBM Quantum India Lead",
+    "image": "/images/dr-l-v-subramaniam.png",
+    "linkedin": "lvsubramaniam"
+  },
+  {
+    "id": 4,
+    "name": "Prof. S. Amarendra Kumar",
+    "role": "Patron; Registrar, RGUKT-AP",
+    "image": "/images/prof-s-amarendra-kumar.jpg",
+    "linkedin": "amarendra-kumar-sandra-57a72b86"
+  },
+  {
+    "id": 5,
+    "name": "Prof. K. V. G. D. Balaji",
+    "role": "Patron; Director, RGUKT-Srikakulam",
+    "image": "/images/prof-k-v-g-d-balaji.jpg",
+    "linkedin": "prof-k-v-g-d-balaji-62656a30"
+  },
+  {
+    "id": 6,
+    "name": "Prof. A. V. S. S. Kumara Swami Gupta",
+    "role": "Patron; Director, RGUKT-RK Valley",
+    "image": "/images/prof-a-v-s-s-kumara-swami-gupta.jpg",
+    "linkedin": ""
+  },
+  {
+    "id": 7,
+    "name": "Dr. M. Siva Rama Krishna",
+    "role": "Convenor; Dean Academics, RGUKT-Srikakulam",
+    "image": "/images/dr-m-siva-rama-krishna.jpg",
+    "linkedin": "dr-siva-rama-krishna-merugu-525356381"
+  },
+  {
+    "id": 8,
+    "name": "Dr. M. Rama Krishna",
+    "role": "Convenor; Administrative Officer, RGUKT-Srikakulam",
+    "image": "/images/dr-m-rama-krishna.jpg",
+    "linkedin": ""
+  },
+  {
+    "id": 9,
+    "name": "Mr. P. Shyam",
+    "role": "Co-Convenor; Dean EITP, RGUKT-AP",
+    "image": "/images/mr-p-shyam.jpg",
+    "linkedin": "shyamperaka"
+  },
+  {
+    "id": 10,
+    "name": "Mrs. D. Sravani",
+    "role": "Co-Convenor; Dean Academics, RGUKT-AP",
+    "image": "/images/mrs-d-sravani.jpg",
+    "linkedin": ""
+  },
+  {
+    "id": 11,
+    "name": "Mr. B. Prasad",
+    "role": "Co-Convenor; Chief Administrative Officer, RGUKT-AP",
+    "image": "/images/mr-b-prasad.jpg",
+    "linkedin": ""
+  },
+  {
+    "id": 12,
+    "name": "Dr. Sadu Chiranjeevi",
+    "role": "Co-Convenor; Dean Academics, RGUKT-Nuzvid",
+    "image": "/images/dr-sadu-chiranjeevi.jpg",
+    "linkedin": ""
+  },
+  {
+    "id": 13,
+    "name": "Dr. B. Lakshmana Rao",
+    "role": "Co-Convenor; Administrative Officer, RGUKT-Nuzvid",
+    "image": "/images/dr-b-lakshmana-rao.jpg",
+    "linkedin": ""
+  },
+  {
+    "id": 14,
+    "name": "Mr. Damodar Ramesh Kailas",
+    "role": "Co-Convenor; Dean Academics, RGUKT-RK Valley",
+    "image": "/images/mr-daumdar-ramesh-kailas.jpg",
+    "linkedin": ""
+  },
+  {
+    "id": 15,
+    "name": "Dr. P. Ravi Kumar",
+    "role": "Co-Convenor; Administrative Officer, RGUKT-RK Valley",
+    "image": "/images/dr-p-ravi-kumar.jpg",
+    "linkedin": ""
+  },
+  {
+    "id": 16,
+    "name": "Mr. M. Rupas Kumar",
+    "role": "Co-Convenor; Dean Academics, RGUKT-Ongole",
+    "image": "/images/mr-m-rupas-kumar.jpg",
+    "linkedin": ""
+  },
+  {
+    "id": 17,
+    "name": "Mr. N. Chandra Shekar",
+    "role": "Co-Convenor; Administrative Officer, RGUKT-Ongole",
+    "image": "/images/mr-n-chandra-shekar.jpg",
+    "linkedin": ""
+  }
+]

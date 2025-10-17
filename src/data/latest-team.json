@@ -1,0 +1,162 @@
+[
+  {
+    "id": 1,
+    "name": "Katam Nikhil Teja",
+    "role": "Lead Organizer",
+    "study": "Computer Science & Engineering",
+    "image": "/images/nikhil.jpg",
+    "twitter": "",
+    "linkedin": "katam-nikhil-teja-327a50240",
+    "instagram": ""
+  },
+  {
+    "id": 2,
+    "name": "D.Kasim Vali",
+    "role": "Co Organizer",
+    "study": "Computer Science & Engineering",
+    "image": "/images/khasim.jpg",
+    "twitter": "",
+    "linkedin": "kasim-vali-212341260",
+    "instagram": ""
+  },
+  {
+    "id": 3,
+    "name": "Cherukuri Praveen Kumar",
+    "role": "Co Organizer",
+    "study": "Computer Science & Engineering",
+    "image": "/images/cherukuri.jpg",
+    "twitter": "",
+    "linkedin": "praveen-kumar-cherukuri-779b6927b",
+    "instagram": ""
+  },
+  {
+    "id": 4,
+    "name": "Ch John Babu",
+    "role": "Co Organizer",
+    "study": "Computer Science & Engineering",
+    "image": "/images/john.jpg",
+    "twitter": "",
+    "linkedin": "john-babu-chaduvula-70b57624b",
+    "instagram": ""
+  },
+  {
+    "id": 5,
+    "name": "K Guna Sri",
+    "role": "Co Organizer",
+    "study": "Computer Science & Engineering",
+    "image": "/images/guna-sri.jpg",
+    "twitter": "",
+    "linkedin": "kimidi-gunasri-38151931a",
+    "instagram": ""
+  },
+  {
+    "id": 6,
+    "name": "Inti Praveen Kumar",
+    "role": "Technical Manager",
+    "study": "Computer Science & Engineering",
+    "image": "/images/praveen_inti.jpg",
+    "twitter": "",
+    "linkedin": "praveen14641",
+    "instagram": ""
+  },
+  {
+    "id": 7,
+    "name": "Guntrolu Pavan Prasanth",
+    "role": "Web Manager",
+    "study": "Computer Science & Engineering",
+    "image": "/images/pavanprasanth.jpg",
+    "twitter": "pavanprasanth_",
+    "linkedin": "pavanprasanthguntrolu",
+    "instagram": "pavan_parker"
+  },
+  {
+    "id": 16,
+    "name": "Prabhas Vemula",
+    "role": "Deployment Manager",
+    "study": "Computer Science & Engineering",
+    "image": "/images/prabhas.jpg",
+    "twitter": "",
+    "linkedin": "vemula-prabhas",
+    "instagram": ""
+  },
+  {
+    "id": 8,
+    "name": "GORLA NISHANTH REDDY",
+    "role": "Content Manager",
+    "study": "Electrical & Electronics Engineering",
+    "image": "/images/nishanth.jpg",
+    "twitter": "",
+    "linkedin": "nishanth-reddy-1174a735b",
+    "instagram": "theeo_vykth"
+  },
+  {
+    "id": 9,
+    "name": "REKHALIGA SRIDHAR",
+    "role": "Finance Manager",
+    "study": "Civil Engineering",
+    "image": "/images/sridhar.jpg",
+    "twitter": "",
+    "linkedin": "sridhar-rekhaliga-97a9242a2",
+    "instagram": ""
+  },
+  {
+    "id": 10,
+    "name": "Nalla Harshitha sri",
+    "role": "Art & Aesthetics Manager",
+    "study": "Computer Science & Engineering",
+    "image": "/images/harshitha.jpg",
+    "twitter": "",
+    "linkedin": "nalla-harshitha-sri-ab4453306",
+    "instagram": "harshiithaa_45"
+  },
+  {
+    "id": 15,
+    "name": "Anusha Sanapathi",
+    "role": "Public Relations Manager",
+    "study": "Electronics and Communication Engineering",
+    "image": "/images/anusha.jpg",
+    "twitter": "",
+    "linkedin": "anushasanapathi1232",
+    "instagram": ""
+  },
+  {
+    "id": 11,
+    "name": "Yaso Vardhan Anaparthi",
+    "role": "Design Manager",
+    "study": "Computer Science & Engineering",
+    "image": "/images/yasho.jpg",
+    "twitter": "",
+    "linkedin": "yaso-vardhan-anaparthi-106377325",
+    "instagram": "yasho_11"
+  },
+  {
+    "id": 12,
+    "name": "VEERA ROHIT",
+    "role": "Social Media Manager",
+    "study": "Computer Science & Engineering",
+    "image": "/images/rohit.jpg",
+    "twitter": "",
+    "linkedin": "rohitveera4096",
+    "instagram": "_rohitveera"
+  },
+  {
+    "id": 13,
+    "name": "Sashaank",
+    "role": "Social Media Manager",
+    "study": "Electronics and Communication Engineering",
+    "image": "/images/shashank.jpg",
+    "twitter": "",
+    "linkedin": "manapurapu-sashank-106226384",
+    "instagram": ""
+  },
+  {
+    "id": 14,
+    "name": "V VISHNU VARDHAN",
+    "role": "AI & Automation Manager",
+    "study": "Computer Science & Engineering",
+    "image": "/images/vishnu.jpeg",
+    "twitter": "",
+    "linkedin": "vishnu-vardhan-037486289",
+    "instagram": "mrvishnupro"
+  }
+]

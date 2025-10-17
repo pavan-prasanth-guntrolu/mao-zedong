@@ -1,0 +1,120 @@
+[
+  {
+    "id": 1,
+    "name": "L. Venkata Subramanyam",
+    "title": "Lead, IBM Quantum India",
+    "company": "IBM Quantum",
+    "bio": "Pre-Event Orientation session",
+    "image": "/images/dr-l-v-subramaniam.png",
+    "twitter": "@lvenkatasubramanyam",
+    "linkedin": "lvenkatasubramanyam",
+    "talk": {
+      "title": "Advancing Practical Quantum Computing",
+      "abstract": "An overview of IBM Quantum's latest research initiatives and practical applications of quantum computing for industry and academia.",
+      "time": "10:00 AM",
+      "date": "2025-10-21"
+    }
+  },
+
+  {
+    "id": 2,
+    "name": "Elías F. Combarro",
+    "title": "Advisory Board - Spain Representative, CERN Quantum Technology Initiative | Associate Professor, University of Oviedo, Spain",
+    "company": "University of Oviedo, Spain",
+    "bio": "Pre-Event Orientation session",
+    "image": "/images/elias-f-combarro.png",
+    "twitter": "",
+    "linkedin": "elias-f-combarro",
+    "talk": {
+      "title": "Quantum Technology: European Perspectives",
+      "abstract": "An insight into CERN’s Quantum Technology Initiative and Europe's growing ecosystem in quantum research and development.",
+      "time": "3:00 PM - 5:30 PM",
+      "date": "2025-10-23"
+    }
+  },
+
+  {
+    "id": 3,
+    "name": "Frank C. Zickert, PhD",
+    "title": "Quantum Algorithm Engineer and Trainer",
+    "company": "Independent Quantum Educator",
+    "bio": "Specialist in developing quantum algorithm solutions and mentoring quantum enthusiasts.",
+    "image": "/images/frank.jpg",
+    "twitter": "",
+    "linkedin": "frank-c-zickert-phd-544654333",
+    "talk": {
+      "title": "Applied Quantum Algorithms for Developers",
+      "abstract": "A hands-on look at implementing and training real-world quantum algorithms using open-source tools.",
+      "time": "To be announced",
+      "date": "Requested for Hackathon"
+    }
+  },
+
+  {
+    "id": 4,
+    "name": "Gregory (Greg) Skulmoski",
+    "title": "Associate Professor, Faculty of Society & Design, Bond University",
+    "company": "Bond University",
+    "bio": "Expert in research methods, innovation, and quantum technology education.",
+    "image": "/images/gregory.jpg",
+    "twitter": "",
+    "linkedin": "gregoryskulmoski",
+    "talk": {
+      "title": "Bridging Research and Quantum Innovation",
+      "abstract": "Insights into integrating quantum technology and academic research to foster innovation and interdisciplinary learning.",
+      "time": "To be confirmed",
+      "date": "2025-10-22"
+    }
+  },
+
+  {
+    "id": 5,
+    "name": "Vivek Nainwal",
+    "title": "Research Engineer, CDAC Hyderabad",
+    "company": "Centre for Development of Advanced Computing (CDAC)",
+    "bio": "Quantum researcher from CDAC Hyderabad working on high-performance computing and quantum simulation.",
+    "image": "/images/vivek.jpg",
+    "twitter": "",
+    "linkedin": "vivek-nainwal",
+    "talk": {
+      "title": "Quantum Research Initiatives at CDAC",
+      "abstract": "An overview of CDAC Hyderabad’s research efforts in advancing quantum computing and national HPC initiatives.",
+      "time": "To be announced",
+      "date": "2025-10-24"
+    }
+  },
+
+  {
+    "id": 6,
+    "name": "Abijeeth Teja",
+    "title": "Engineer, CDAC Hyderabad",
+    "company": "Centre for Development of Advanced Computing (CDAC)",
+    "bio": "Engineer from CDAC Hyderabad focusing on quantum algorithm development and system implementation.",
+    "image": "",
+    "twitter": "",
+    "linkedin": "abijeeth-teja",
+    "talk": {
+      "title": "Building Quantum Computing Infrastructure",
+      "abstract": "Discussion on quantum software and hardware integration in India's growing quantum ecosystem.",
+      "time": "To be announced",
+      "date": "2025-10-24"
+    }
+  },
+
+  {
+    "id": 7,
+    "name": "Rahul Rana",
+    "title": "Researcher, TCS Research",
+    "company": "Tata Consultancy Services (TCS)",
+    "bio": "Researcher at TCS exploring practical applications of quantum computing and AI integration.",
+    "image": "",
+    "twitter": "",
+    "linkedin": "rahul-rana",
+    "talk": {
+      "title": "Quantum Meets Industry",
+      "abstract": "An exploration of how TCS Research is leveraging quantum computing to solve industrial and AI-related challenges.",
+      "time": "To be announced",
+      "date": "2025-10-25"
+    }
+  }
+]

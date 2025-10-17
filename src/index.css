@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Quantum-themed design system for Qiskit Fall Fest 2025 */
+
+@layer base {
+  :root {
+    /* Base colors */
+    --background: 220 20% 97%;
+    --foreground: 220 10% 15%;
+
+    /* Quantum theme colors */
+    --quantum-blue: 217 91% 25%;
+    --quantum-blue-light: 217 91% 45%;
+    --quantum-purple: 259 94% 51%;
+    --quantum-purple-light: 259 94% 71%;
+    --quantum-cyan: 188 94% 43%;
+    --quantum-cyan-light: 188 94% 63%;
+
+    /* Card system with glassmorphism */
+    --card: 220 20% 98%;
+    --card-foreground: 220 10% 15%;
+    --card-glass: 220 20% 98% / 0.8;
+
+    --popover: 220 20% 98%;
+    --popover-foreground: 220 10% 15%;
+
+    --primary: 217 91% 35%;
+    --primary-foreground: 0 0% 98%;
+    --primary-hover: 217 91% 45%;
+    --primary-rgb: 25, 93, 194; /* RGB equivalent of hsl(217, 91%, 35%) */
+
+    --secondary: 259 94% 61%;
+    --secondary-foreground: 0 0% 98%;
+    --secondary-hover: 259 94% 71%;
+
+    --accent: 188 94% 53%;
+    --accent-foreground: 0 0% 98%;
+    --accent-hover: 188 94% 63%;
+
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 10% 46%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 217 91% 35%;
+
+    --radius: 0.75rem;
+
+    /* Gradients */
+    --gradient-quantum: linear-gradient(
+      135deg,
+      hsl(217 91% 35%),
+      hsl(259 94% 61%)
+    );
+    --gradient-hero: linear-gradient(
+      135deg,
+      hsl(217 91% 15%) 0%,
+      hsl(259 94% 25%) 50%,
+      hsl(188 94% 25%) 100%
+    );
+    --gradient-card: linear-gradient(
+      135deg,
+      hsl(220 20% 98% / 0.7),
+      hsl(220 20% 95% / 0.9)
+    );
+  }
+
+  .dark {
+    --background: 220 27% 8%;
+    --foreground: 0 0% 95%;
+
+    --card: 220 27% 12%;
+    --card-foreground: 0 0% 95%;
+    --card-glass: 220 27% 12% / 0.8;
+
+    --popover: 220 27% 12%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 217 91% 55%;
+    --primary-foreground: 220 27% 8%;
+    --primary-hover: 217 91% 65%;
+    --primary-rgb: 77, 143, 242; /* RGB equivalent of hsl(217, 91%, 55%) */
+
+    --secondary: 259 94% 71%;
+    --secondary-foreground: 220 27% 8%;
+    --secondary-hover: 259 94% 81%;
+
+    --accent: 188 94% 63%;
+    --accent-foreground: 220 27% 8%;
+    --accent-hover: 188 94% 73%;
+
+    --muted: 220 27% 16%;
+    --muted-foreground: 0 0% 65%;
+
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 27% 18%;
+    --input: 220 27% 18%;
+    --ring: 217 91% 55%;
+
+    /* Dark gradients */
+    --gradient-quantum: linear-gradient(
+      135deg,
+      hsl(217 91% 55%),
+      hsl(259 94% 71%)
+    );
+    --gradient-hero: linear-gradient(
+      135deg,
+      hsl(220 27% 8%) 0%,
+      hsl(259 94% 15%) 50%,
+      hsl(188 94% 15%) 100%
+    );
+    --gradient-card: linear-gradient(
+      135deg,
+      hsl(220 27% 12% / 0.7),
+      hsl(220 27% 15% / 0.9)
+    );
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+    background: linear-gradient(
+      135deg,
+      hsl(var(--background)),
+      hsl(var(--background)) 50%,
+      hsl(var(--muted)) 100%
+    );
+    min-height: 100vh;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-poppins;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply backdrop-blur-lg border border-white/10;
+    background: var(--gradient-card);
+  }
+
+  .btn-quantum {
+    @apply relative overflow-hidden font-medium transition-all duration-300;
+    background: var(--gradient-quantum);
+  }
+
+  .btn-quantum::before {
+    content: "";
+    @apply absolute inset-0 opacity-0 transition-opacity duration-300;
+    background: linear-gradient(
+      135deg,
+      hsl(var(--primary-hover)),
+      hsl(var(--secondary-hover))
+    );
+  }
+
+  .btn-quantum:hover::before {
+    @apply opacity-100;
+  }
+
+  @keyframes pulse-glow {
+    0% {
+      box-shadow: 0 0 5px 0 rgba(var(--primary-rgb), 0.3);
+    }
+    50% {
+      box-shadow: 0 0 15px 0 rgba(var(--primary-rgb), 0.5);
+    }
+    100% {
+      box-shadow: 0 0 5px 0 rgba(var(--primary-rgb), 0.3);
+    }
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 3s infinite;
+  }
+
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-foreground;
+    /* background: var(--gradient-quantum); */
+  }
+
+  .text-custom {
+    /* background: linear-gradient(90deg, #f107a3, #f107a3); */
+    background: linear-gradient(90deg, #7b2ff7, #f107a3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    box-shadow: #fff;
+    -webkit-text-stroke: 1px #fff;
+  }
+  .text-border {
+    -webkit-text-stroke: 1px #f107a3;
+    color: transparent;
+    font-weight: 800;
+    font-size: inherit;
+    font-family: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+  }
+
+  .text-purple {
+    color: hsl(259 94% 51%);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
