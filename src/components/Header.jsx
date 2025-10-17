@@ -25,9 +25,9 @@ const NAVIGATION = [
       { name: "Schedule", href: "/schedule" },
       { name: "Workshops", href: "/workshops" },
       { name: "Hackathon", href: "/hackathon" },
+      { name: "Guest Speaker", href: "/guest-speaker" }, // ✅ moved here
       { name: "Ambassadors", href: "/ambassadors" },
       { name: "Apply as Ambassador", href: "/ambassador" },
-      { name: "Guest Speaker", href: "/guest-speaker" },
     ],
   },
   {
@@ -135,7 +135,6 @@ export default function Header() {
                 alt="Qiskit Fall Fest logo"
                 className="h-10 w-auto"
               />
-
               <span className="text-lg font-bold">Qiskit Fall Fest '25</span>
             </a>
           </div>

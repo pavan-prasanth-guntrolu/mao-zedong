@@ -4,13 +4,6 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/lib/supabase";
@@ -25,13 +18,24 @@ const Accommodation = () => {
     fullName: "",
     email: "",
     phone: "",
-    days: "",
-    utr: "", // New field for UTR
+    selectedDays: [],
   });
 
-  const [totalCost, setTotalCost] = useState(0); // State to store total cost
+  const [totalCost, setTotalCost] = useState(0);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  // ✅ Event days (21–27 Oct 2025)
+  const eventDays = [
+    { id: 1, date: "2025-10-21", label: "Day 1 – Oct 21 (Tue)" },
+    { id: 2, date: "2025-10-22", label: "Day 2 – Oct 22 (Wed)" },
+    { id: 3, date: "2025-10-23", label: "Day 3 – Oct 23 (Thu)" },
+    { id: 4, date: "2025-10-24", label: "Day 4 – Oct 24 (Fri)" },
+    { id: 5, date: "2025-10-25", label: "Day 5 – Oct 25 (Sat)" },
+    { id: 6, date: "2025-10-26", label: "Day 6 – Oct 26 (Sun)" },
+    { id: 7, date: "2025-10-27", label: "Day 7 – Oct 27 (Mon)" },
+  ];
+
+  // Autofill email
   useEffect(() => {
     if (user?.email) {
       setFormData((prev) => ({ ...prev, email: user.email }));
@@ -40,19 +44,25 @@ const Accommodation = () => {
 
   const handleInputChange = (field, value) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
+  };
 
-    // Calculate total cost when "days" is updated
-    if (field === "days") {
-      const days = parseInt(value) || 0;
-      setTotalCost(days * 100); // Each day costs ₹100
-    }
+  const handleDayCheckboxChange = (dayId) => {
+    setFormData((prev) => {
+      const selected = new Set(prev.selectedDays);
+      if (selected.has(dayId)) selected.delete(dayId);
+      else selected.add(dayId);
+
+      const updated = Array.from(selected);
+      setTotalCost(updated.length * 100);
+      return { ...prev, selectedDays: updated };
+    });
   };
 
   const validateForm = () => {
-    const requiredFields = ["fullName", "email", "phone", "days", "utr"];
-    const missingFields = requiredFields.filter((f) => !formData[f]);
+    const required = ["fullName", "email", "phone"];
+    const missing = required.filter((f) => !formData[f]);
 
-    if (missingFields.length > 0) {
+    if (missing.length > 0) {
       toast({
         title: "Missing Information",
         description: "Please fill in all required fields.",
@@ -60,6 +70,16 @@ const Accommodation = () => {
       });
       return false;
     }
+
+    if (formData.selectedDays.length === 0) {
+      toast({
+        title: "Select Days",
+        description: "Please choose at least one day to book.",
+        variant: "destructive",
+      });
+      return false;
+    }
+
     return true;
   };
 
@@ -69,15 +89,15 @@ const Accommodation = () => {
 
     setIsSubmitting(true);
     try {
+      const daysCount = formData.selectedDays.length;
       const { error } = await supabase.from("accommodation").insert([
         {
           user_id: user.id,
           fullName: formData.fullName,
           email: formData.email,
           phone: formData.phone,
-          days: formData.days,
+          selected_days: formData.selectedDays,
           total_cost: totalCost,
-          utr: formData.utr,
         },
       ]);
 
@@ -85,7 +105,9 @@ const Accommodation = () => {
 
       toast({
         title: "Accommodation Booked!",
-        description: `Your accommodation for ${formData.days} days has been booked. Total cost: ₹${totalCost}.`,
+        description: `You’ve booked accommodation for ${daysCount} ${
+          daysCount === 1 ? "day" : "days"
+        }. Total cost: ₹${totalCost}.`,
       });
 
       navigate("/");
@@ -108,7 +130,7 @@ const Accommodation = () => {
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold mb-4">Accommodation Booking</h1>
             <p className="text-lg text-muted-foreground">
-              Book your stay for the event. Each day costs ₹100.
+              Select the days you’d like accommodation for. Each day costs ₹100.
             </p>
           </div>
 
@@ -155,64 +177,34 @@ const Accommodation = () => {
                 </div>
 
                 <div>
-                  <Label htmlFor="days">Number of Days *</Label>
-                  <Select
-                    value={formData.days}
-                    onValueChange={(value) => handleInputChange("days", value)}
-                  >
-                    <SelectTrigger>
-                      <SelectValue placeholder="Select number of days" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      {[...Array(7).keys()].map((day) => (
-                        <SelectItem
-                          key={day + 1}
-                          value={(day + 1).toString()}
-                          className="px-4 py-2 text-sm hover:bg-primary/10 rounded-md"
-                        >
-                          {day + 1} {day + 1 === 1 ? "Day" : "Days"}
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
-                  {formData.days && (
+                  <Label>Select Days *</Label>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-2">
+                    {eventDays.map((day) => (
+                      <label
+                        key={day.id}
+                        className="flex items-center space-x-2 bg-white/5 rounded-lg px-3 py-2 cursor-pointer hover:bg-primary/10"
+                      >
+                        <input
+                          type="checkbox"
+                          className="accent-primary"
+                          checked={formData.selectedDays.includes(day.id)}
+                          onChange={() => handleDayCheckboxChange(day.id)}
+                        />
+                        <span>{day.label}</span>
+                      </label>
+                    ))}
+                  </div>
+
+                  {formData.selectedDays.length > 0 && (
                     <p className="text-sm text-muted-foreground mt-2">
                       Total Cost: ₹{totalCost}
                     </p>
                   )}
                 </div>
 
-                <div>
-                  <Label htmlFor="utr">UTR (Transaction Reference) *</Label>
-                  <Input
-                    id="utr"
-                    value={formData.utr}
-                    onChange={(e) => handleInputChange("utr", e.target.value)}
-                    placeholder="Enter UTR number"
-                    required
-                  />
-                </div>
-
-                <div className="border-t border-border pt-4">
-                  <h3 className="text-lg font-semibold mb-2">Bank Details</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Please deposit the total amount to the following bank
-                    account:
-                  </p>
-                  <ul className="text-sm mt-2">
-                    <li>Bank Name: Quantum Bank</li>
-                    <li>Account Number: 1234567890</li>
-                    <li>IFSC Code: QBANK0001234</li>
-                  </ul>
-                  <p className="text-sm text-muted-foreground mt-2">
-                    After depositing, enter the UTR number and click "Continue"
-                    to complete your booking.
-                  </p>
-                </div>
-
                 <Button
                   type="submit"
-                  className="w-full btn-quantum py-3 text-lg font-semibold rounded-lg shadow-lg"
+                  className="w-full py-3 text-lg font-semibold rounded-lg shadow-lg bg-primary text-white hover:scale-[1.02] hover:shadow-[0_0_12px_rgba(59,130,246,0.5)] transition-all duration-200"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? "Booking..." : "Continue"}

@@ -7,8 +7,6 @@ import {
   BrowserRouter,
   Routes,
   Route,
-  useSearchParams,
-  useLocation,
 } from "react-router-dom";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { AnimatePresence, motion, useScroll } from "framer-motion";
@@ -16,14 +14,13 @@ import { AuthProvider } from "@/components/AuthProvider";
 import { HelmetProvider } from "react-helmet-async";
 import { extractAndStoreReferralCode } from "@/lib/referralCodeUtils";
 
-// Core components
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import LoadingSpinner from "@/components/LoadingSpinner";
 import ReferralHandler from "@/components/ReferralHandler";
 import CurtainLanding from "./pages/CurtainLanding";
 
-// Pages with lazy loading for better performance
+// Lazy loaded pages
 const Home = lazy(() => import("@/pages/Home"));
 const About = lazy(() => import("@/pages/About"));
 const Register = lazy(() => import("@/pages/Register"));
@@ -43,7 +40,6 @@ const Login = lazy(() => import("@/pages/Login"));
 const Refer = lazy(() => import("@/pages/Refer"));
 const Team = lazy(() => import("@/pages/Team"));
 const Supporters = lazy(() => import("@/pages/Supporters"));
-
 const Secret = lazy(() => import("@/pages/Secret"));
 const Ambassador = lazy(() => import("@/pages/Ambassador"));
 const Ambassadors = lazy(() => import("@/pages/Ambassadors"));
@@ -56,9 +52,7 @@ const Stats = lazy(() => import("@/pages/Stats"));
 
 const queryClient = new QueryClient({
   defaultOptions: {
-    queries: {
-      staleTime: 5 * 60 * 1000, // 5 minutes
-    },
+    queries: { staleTime: 5 * 60 * 1000 },
   },
 });
 
@@ -66,31 +60,20 @@ const App = () => {
   const [showScroll, setShowScroll] = useState(false);
   const { scrollYProgress } = useScroll();
 
-  const checkScrollTop = () => {
-    if (window.scrollY > 200) {
-      setShowScroll(true);
-    } else {
-      setShowScroll(false);
-    }
-  };
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
   useEffect(() => {
+    const checkScrollTop = () => setShowScroll(window.scrollY > 200);
     window.addEventListener("scroll", checkScrollTop);
-    return () => {
-      window.removeEventListener("scroll", checkScrollTop);
-    };
+    return () => window.removeEventListener("scroll", checkScrollTop);
   }, []);
+
+  const scrollToTop = () =>
+    window.scrollTo({ top: 0, behavior: "smooth" });
 
   return (
     <HelmetProvider>
       <QueryClientProvider client={queryClient}>
         <ThemeProvider defaultTheme="dark" storageKey="qiskit-fest-theme">
           <TooltipProvider>
-            {/* Centered Toast */}
             <div
               style={{
                 position: "fixed",
@@ -142,7 +125,7 @@ const App = () => {
                           <Route path="/materials" element={<Materials />} />
                           <Route path="/secret14641" element={<Secret />} />
                           <Route path="/ors" element={<Secret />} />
-                          <Route path="/stats" element={<Stats />}></Route>
+                          <Route path="/stats" element={<Stats />} />
                           <Route path="/sponsors" element={<Sponsors />} />
                           <Route path="/organizers" element={<Organizers />} />
                           <Route path="/supporters" element={<Supporters />} />
@@ -160,6 +143,7 @@ const App = () => {
                           <Route path="/refer" element={<Refer />} />
                           <Route path="/profile" element={<Profile />} />
                           <Route path="/admin" element={<Admin />} />
+                          {/* 👇 NEW ACCOMMODATION ROUTE */}
                           <Route
                             path="/accommodation"
                             element={<Accommodation />}
@@ -168,7 +152,6 @@ const App = () => {
                             path="/sponsorship-form"
                             element={<SponsorshipForm />}
                           />
-                          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                           <Route path="*" element={<NotFound />} />
                         </Routes>
                       </Suspense>
@@ -178,7 +161,6 @@ const App = () => {
                   {showScroll && (
                     <div className="fixed bottom-4 right-4 w-16 h-16">
                       <svg className="w-full h-full" viewBox="0 0 100 100">
-                        {/* Background circle */}
                         <circle
                           cx="50"
                           cy="50"
@@ -187,7 +169,6 @@ const App = () => {
                           strokeWidth="3"
                           fill="transparent"
                         />
-                        {/* Progress circle */}
                         <motion.circle
                           cx="50"
                           cy="50"
