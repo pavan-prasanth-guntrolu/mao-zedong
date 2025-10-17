@@ -1,0 +1,43 @@
+name: Build and Publish to deploy branch
+on:
+  push:
+    branches: [ main ]   # change if needed
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write   # needed to push to deploy branch
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Use Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install and build
+        run: |
+          npm ci
+          npm run build
+
+      # Publish ONLY the contents of dist/ to the 'deploy' branch (force replace)
+      - name: Publish dist to deploy branch
+        run: |
+          rm -rf .git/worktrees/deploy || true
+          git fetch origin deploy || true
+          git worktree add --detach ../deploy-tmp origin/deploy || true
+          rm -rf ../deploy-tmp
+          mkdir ../deploy-tmp
+          cp -R dist/* ../deploy-tmp || true
+          cd ../deploy-tmp
+          git init
+          git checkout -b deploy
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Deploy $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+          git remote add origin "${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}.git"
+          git push -f origin deploy

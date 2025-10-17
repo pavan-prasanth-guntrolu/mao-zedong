@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "name": "Katam Nikhil Teja",
+    "role": "Event Lead",
+    "year": "Final Year",
+    "branch": "Computer Science",
+    "bio": "Passionate about quantum computing and event management. Leading the organization of Qiskit Fall Fest 2025.",
+    "image": "katam-nikhil.jpg",
+    "linkedin": "aaravpatel",
+    "github": "aaravpatel"
+  },
+  {
+    "id": 2,
+    "name": "Priya Sharma",
+    "role": "Technical Lead",
+    "year": "Third Year",
+    "branch": "Computer Science",
+    "bio": "Quantum computing enthusiast with experience in Qiskit and quantum algorithms. Manages technical workshops.",
+    "image": "/team/priya-sharma.jpg",
+    "linkedin": "priyasharma",
+    "github": "priyasharma"
+  },
+  {
+    "id": 3,
+    "name": "Rohan Verma",
+    "role": "Hackathon Coordinator",
+    "year": "Third Year",
+    "branch": "Electronics & Communication",
+    "bio": "Hackathon veteran and quantum hardware enthusiast. Coordinates the campus hackathon and mentoring.",
+    "image": "/team/rohan-verma.jpg",
+    "linkedin": "rohanverma",
+    "github": "rohanverma"
+  },
+  {
+    "id": 4,
+    "name": "Anisha Gupta",
+    "role": "Outreach & Marketing",
+    "year": "Second Year",
+    "branch": "Computer Science",
+    "bio": "Social media strategist and community builder. Handles event promotion and speaker coordination.",
+    "image": "/team/anisha-gupta.jpg",
+    "linkedin": "anishagupta",
+    "github": "anishagupta"
+  },
+  {
+    "id": 5,
+    "name": "Karthik Reddy",
+    "role": "Logistics Manager",
+    "year": "Third Year",
+    "branch": "Information Technology",
+    "bio": "Ensures smooth event operations and manages venue logistics. Expert in event planning and execution.",
+    "image": "/team/karthik-reddy.jpg",
+    "linkedin": "karthikreddy",
+    "github": "karthikreddy"
+  },
+  {
+    "id": 6,
+    "name": "Sneha Joshi",
+    "role": "Design Lead",
+    "year": "Second Year",
+    "branch": "Computer Science",
+    "bio": "Creative designer responsible for event branding, promotional materials, and website design.",
+    "image": "/team/sneha-joshi.jpg",
+    "linkedin": "snehajoshi",
+    "github": "snehajoshi"
+  }
+]

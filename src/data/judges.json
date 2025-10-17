@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "Dr. Arvind Krishnamurthy",
+    "title": "Director of Quantum Research",
+    "company": "IBM India Research",
+    "expertise": ["Quantum Algorithms", "Error Correction", "Hardware Design"],
+    "bio": "Dr. Krishnamurthy leads quantum research initiatives at IBM India and has 15+ years of experience in quantum computing research.",
+    "image": "/judges/arvind-krishnamurthy.jpg",
+    "linkedin": "arvindkrishnamurthy"
+  },
+  {
+    "id": 2,
+    "name": "Prof. Sanchita Das",
+    "title": "Professor of Physics",
+    "company": "Indian Institute of Science",
+    "expertise": ["Quantum Information Theory", "Quantum Cryptography", "Theoretical Physics"],
+    "bio": "Prof. Das is a renowned quantum information theorist with expertise in quantum cryptography and foundational aspects of quantum mechanics.",
+    "image": "/judges/sanchita-das.jpg",
+    "linkedin": "sanchitadas"
+  },
+  {
+    "id": 3,
+    "name": "Ravi Sharma",
+    "title": "Senior Quantum Engineer",
+    "company": "Google Quantum AI",
+    "expertise": ["Quantum Software", "Circuit Optimization", "Quantum ML"],
+    "bio": "Ravi is a senior engineer working on quantum software optimization and has contributed to major quantum computing frameworks.",
+    "image": "/judges/ravi-sharma.jpg",
+    "linkedin": "ravisharma"
+  },
+  {
+    "id": 4,
+    "name": "Dr. Neha Kulkarni",
+    "title": "Quantum Applications Lead",
+    "company": "Microsoft Quantum",
+    "expertise": ["Quantum Applications", "Quantum Chemistry", "Industry Solutions"],
+    "bio": "Dr. Kulkarni specializes in quantum applications for chemistry and optimization, bridging theory and practical implementation.",
+    "image": "/judges/neha-kulkarni.jpg",
+    "linkedin": "nehakulkarni"
+  }
+]

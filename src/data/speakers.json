@@ -1,0 +1,214 @@
+[
+  {
+    "id": 1,
+    "name": "L. Venkata Subramanyam",
+    "title": "Lead, IBM Quantum India",
+    "company": "IBM Quantum",
+    "bio": "Pre-Event Orientation session",
+    "image": "/images/dr-l-v-subramaniam.png",
+    "twitter": "@lvenkatasubramanyam",
+    "linkedin": "lvenkatasubramanyam",
+    "talk": {
+      "title": "Advancing Practical Quantum Computing",
+      "abstract": "An overview of IBM Quantum's latest research initiatives and practical applications of quantum computing for industry and academia.",
+      "time": "10:00 AM",
+      "date": "2025-10-21"
+    },
+    "status": "Accepted",
+    "mode": "Offline"
+  },
+  {
+    "id": 2,
+    "name": "Elías F. Combarro",
+    "title": "Advisory Board - Spain Representative, CERN Quantum Technology Initiative | Associate Professor, University of Oviedo, Spain",
+    "company": "University of Oviedo, Spain",
+    "bio": "Pre-Event Orientation session",
+    "image": "/images/elias-f-combarro.png",
+    "twitter": "",
+    "linkedin": "elias-f-combarro",
+    "talk": {
+      "title": "Quantum Technology: European Perspectives",
+      "abstract": "An insight into CERN’s Quantum Technology Initiative and Europe's growing ecosystem in quantum research and development.",
+      "time": "3:00 PM - 5:30 PM",
+      "date": "2025-10-23"
+    },
+    "status": "Accepted",
+    "mode": "Online"
+  },
+  {
+    "id": 3,
+    "name": "Frank C. Zickert, PhD",
+    "title": "Quantum Algorithm Engineer and Trainer",
+    "company": "Independent Quantum Educator",
+    "bio": "Specialist in developing quantum algorithm solutions and mentoring quantum enthusiasts. (Time should be updated on 23rd, waiting for reply)",
+    "image": "/images/frank.jpg",
+    "twitter": "",
+    "linkedin": "frank-c-zickert-phd-544654333",
+    "talk": {
+      "title": "Applied Quantum Algorithms for Developers",
+      "abstract": "A hands-on look at implementing and training real-world quantum algorithms using open-source tools.",
+      "time": "To be announced",
+      "date": "Requested for Hackathon"
+    },
+    "status": "Accepted (Time should be updated on 23rd, waiting for reply)",
+    "mode": "Online"
+  },
+  {
+    "id": 4,
+    "name": "Gregory (Greg) Skulmoski",
+    "title": "Associate Professor, Faculty of Society & Design, Bond University",
+    "company": "Bond University",
+    "bio": "Expert in research methods, innovation, and quantum technology education.",
+    "image": "/images/gregory.jpg",
+    "twitter": "",
+    "linkedin": "gregoryskulmoski",
+    "talk": {
+      "title": "Bridging Research and Quantum Innovation",
+      "abstract": "Insights into integrating quantum technology and academic research to foster innovation and interdisciplinary learning.",
+      "time": "To be confirmed",
+      "date": "2025-10-22"
+    },
+    "status": "Accepted",
+    "mode": "Online"
+  },
+  {
+    "id": 6,
+    "name": "Abijeeth Teja",
+    "title": "Engineer, CDAC Hyderabad",
+    "company": "Centre for Development of Advanced Computing (CDAC)",
+    "bio": "Engineer from CDAC Hyderabad focusing on quantum algorithm development and system implementation.",
+    "image": "",
+    "twitter": "",
+    "linkedin": "abijeeth-teja",
+    "talk": {
+      "title": "Building Quantum Computing Infrastructure",
+      "abstract": "Discussion on quantum software and hardware integration in India's growing quantum ecosystem.",
+      "time": "To be announced",
+      "date": "2025-10-24"
+    },
+    "status": "Accepted (Coordinate at the earliest)",
+    "mode": "Offline"
+  },
+  {
+    "id": 7,
+    "name": "Rahul Rana",
+    "title": "Scientist, TCS Research",
+    "company": "Tata Consultancy Services (TCS)",
+    "bio": "Researcher at TCS exploring practical applications of quantum computing and AI integration. (Share the complete schedule to all the guest speakers & stakeholders.)",
+    "image": "",
+    "twitter": "",
+    "linkedin": "rahul-rana",
+    "talk": {
+      "title": "Quantum Meets Industry",
+      "abstract": "An exploration of how TCS Research is leveraging quantum computing to solve industrial and AI-related challenges.",
+      "time": "To be announced",
+      "date": "2025-10-25"
+    },
+    "status": "Accepted",
+    "mode": "Online"
+  },
+  {
+    "id": 8,
+    "name": "Dr. Goutam Paul",
+    "title": "Professor at ISI Kolkata",
+    "company": "Indian Statistical Institute (ISI), Kolkata",
+    "bio": "Renowned academic in information security and quantum computing. (Pulled a request for title & photograph)",
+    "image": "/images/gautam.jpg",
+    "twitter": "",
+    "linkedin": "",
+    "talk": {
+      "title": "To be announced",
+      "abstract": "Guest lecture on advanced cryptography and quantum computing.",
+      "time": "To be announced",
+      "date": "To be announced"
+    },
+    "status": "Accepted (Pulled a request for title & photograph)",
+    "mode": "Online"
+  },
+  {
+    "id": 11,
+    "name": "Dr. Ritajit Majumdar",
+    "title": "Research Scientist, IBM Quantum",
+    "company": "IBM Quantum",
+    "bio": "Research scientist at IBM Quantum focusing on quantum algorithms and systems.",
+    "image": "/images/ritajit.jpg",
+    "twitter": "",
+    "linkedin": "",
+    "talk": {
+      "title": "To be announced",
+      "abstract": "Discussion on current advancements in IBM Quantum research and applications.",
+      "time": "To be announced",
+      "date": "To be announced"
+    },
+    "status": "Accepted"
+  },
+  {
+    "id": 12,
+    "name": "Robert Loredo",
+    "title": "CEO / Founder, Entangled Solutions Group",
+    "company": "Entangled Solutions Group",
+    "bio": "Quantum computing strategist and CEO of Entangled Solutions Group.",
+    "image": "/images/robert.jpg",
+    "twitter": "",
+    "linkedin": "robertloredo",
+    "talk": {
+      "title": "To be announced",
+      "abstract": "Discussion on quantum industry development and practical innovation ecosystems.",
+      "time": "To be announced",
+      "date": "To be announced"
+    },
+    "status": "Accepted",
+    "mode": "Online"
+  },
+  {
+    "id": 13,
+    "name": "Kiran Kaur",
+    "title": "IBM Quantum Representative",
+    "company": "IBM Quantum",
+    "bio": "Representative from IBM Quantum involved in outreach and academic engagement.",
+    "image": "/images/kiran.jpg",
+    "twitter": "",
+    "linkedin": "kiran-kaur-raina-b2922622a",
+    "talk": {
+      "title": "To be announced",
+      "abstract": "IBM Quantum initiatives and academic collaborations in India.",
+      "time": "To be announced",
+      "date": "To be announced"
+    },
+    "status": "Accepted"
+  },
+  {
+    "id": 14,
+    "name": "Janani",
+    "title": "IBM Quantum Support",
+    "company": "IBM Quantum",
+    "bio": "Member of IBM Quantum support and coordination team.",
+    "image": "/images/janani.jpg",
+    "twitter": "",
+    "linkedin": "janani-anantha",
+    "talk": {
+      "title": "To be announced",
+      "abstract": "Support and coordination insights from IBM Quantum programs.",
+      "time": "To be announced",
+      "date": "To be announced"
+    },
+    "status": "Accepted"
+  },
+  {
+    "id": 15,
+    "name": "Soumya Ranjan Swain",
+    "title": "IBM Quantum Ambassador",
+    "company": "IBM Quantum",
+    "bio": "Quantum computing ambassador with IBM, focusing on education and outreach.",
+    "image": "/images/sowmya.jpg",
+    "twitter": "",
+    "linkedin": "soumya-ranjan-swain-2a5768145",
+    "talk": {
+      "title": "To be announced",
+      "abstract": "Guest session on IBM Quantum’s ambassador program and developer ecosystem.",
+      "time": "To be announced",
+      "date": "To be announced"
+    },
+    "status": "Accepted"
+  }
+]
