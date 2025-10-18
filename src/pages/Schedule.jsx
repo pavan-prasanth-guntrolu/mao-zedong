@@ -9,7 +9,8 @@ import {
   Layers,
   Wifi,
 } from "lucide-react";
-import scheduleData from "../data/schedule copy.json";
+// import scheduleData from "../data/schedule copy.json";
+import scheduleData from "../data/schedule.json";
 
 const Schedule = () => {
   const getSessionIcon = (type) => {
