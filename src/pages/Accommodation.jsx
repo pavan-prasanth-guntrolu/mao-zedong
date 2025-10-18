@@ -20,8 +20,13 @@ const Accommodation = () => {
     fullName: "",
     email: "",
     phone: "",
+    gender: "",
+    city: "",
+    collegeName: "",
+    healthIssues: "",
     selectedDays: [],
   });
+
   const [totalCost, setTotalCost] = useState(0);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
@@ -50,7 +55,6 @@ const Accommodation = () => {
 
         if (error) throw error;
         if (data) {
-          // user already booked — show success animation
           setIsSuccess(true);
         }
       } catch (err) {
@@ -85,7 +89,14 @@ const Accommodation = () => {
   };
 
   const validateForm = () => {
-    const required = ["fullName", "email", "phone"];
+    const required = [
+      "fullName",
+      "email",
+      "phone",
+      "gender",
+      "city",
+      "collegeName",
+    ];
     const missing = required.filter((f) => !formData[f]);
     if (missing.length > 0) {
       toast({
@@ -119,6 +130,10 @@ const Accommodation = () => {
           fullName: formData.fullName,
           email: formData.email,
           phone: formData.phone,
+          gender: formData.gender,
+          city: formData.city,
+          college_name: formData.collegeName,
+          health_issues: formData.healthIssues,
           selected_days: formData.selectedDays,
           total_cost: totalCost,
         },
@@ -126,7 +141,7 @@ const Accommodation = () => {
 
       if (error) throw error;
 
-      setIsSuccess(true); // ✅ show success animation
+      setIsSuccess(true);
       toast({
         title: "Accommodation Booked!",
         description: `You’ve booked accommodation for ${daysCount} ${
@@ -134,7 +149,6 @@ const Accommodation = () => {
         }. Our team will contact you soon.`,
       });
 
-      // Optional redirect after few seconds
       setTimeout(() => navigate("/"), 4000);
     } catch (err) {
       console.error(err);
@@ -276,6 +290,61 @@ const Accommodation = () => {
                     onChange={(e) => handleInputChange("phone", e.target.value)}
                     placeholder="+91 XXXXX XXXXX"
                     required
+                  />
+                </div>
+
+                <div>
+                  <Label htmlFor="gender">Gender *</Label>
+                  <select
+                    id="gender"
+                    value={formData.gender}
+                    onChange={(e) =>
+                      handleInputChange("gender", e.target.value)
+                    }
+                    className="w-full rounded-md border border-input bg-background px-3 py-2"
+                    required
+                  >
+                    <option value="">Select gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                  </select>
+                </div>
+
+                <div>
+                  <Label htmlFor="city">City *</Label>
+                  <Input
+                    id="city"
+                    value={formData.city}
+                    onChange={(e) => handleInputChange("city", e.target.value)}
+                    placeholder="Enter your city"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <Label htmlFor="collegeName">College Name *</Label>
+                  <Input
+                    id="collegeName"
+                    value={formData.collegeName}
+                    onChange={(e) =>
+                      handleInputChange("collegeName", e.target.value)
+                    }
+                    placeholder="Enter your college name"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <Label htmlFor="healthIssues">
+                    Do you have any health issues? (Optional)
+                  </Label>
+                  <Input
+                    id="healthIssues"
+                    value={formData.healthIssues}
+                    onChange={(e) =>
+                      handleInputChange("healthIssues", e.target.value)
+                    }
+                    placeholder="Describe briefly if any"
                   />
                 </div>
 
