@@ -117,5 +117,19 @@
     "role": "Co-Convenor; Administrative Officer, RGUKT-Ongole",
     "image": "/images/mr-n-chandra-shekar.jpg",
     "linkedin": ""
+  },
+  {
+    "id": 18,
+    "name": "Mr. Ravi Gadela",
+    "role": "Co-Convenor; Dean Student Welfare, RGUKT-Srikakulam",
+    "image": "/images/ravi_gadela.jpg",
+    "linkedin": "ravi-gedela"
+  },
+  {
+    "id": 19,
+    "name": "Mr. Y. Ramesh",
+    "role": "Co-Convenor; HOD Computer Science, RGUKT-Srikakulam",
+    "image": "/images/ramesh_new.jpg",
+    "linkedin": "ramesh-yajjala-74a22a1b3"
   }
 ]
