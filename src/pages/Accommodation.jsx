@@ -27,10 +27,10 @@ const Accommodation = () => {
     selectedDays: [],
   });
 
-  const [totalCost, setTotalCost] = useState(0);
+  const [amount, setAmount] = useState(0);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(false);
   const [isChecking, setIsChecking] = useState(true);
+  const [hasExistingBooking, setHasExistingBooking] = useState(false);
 
   const eventDays = [
     { id: 1, date: "2025-10-21", label: "Day 1 – Oct 21 (Tue)" },
@@ -42,10 +42,11 @@ const Accommodation = () => {
     { id: 7, date: "2025-10-27", label: "Day 7 – Oct 27 (Mon)" },
   ];
 
-  // ✅ If user already booked, show success
+  // 🧩 Fetch existing booking if user already submitted
   useEffect(() => {
     const checkExistingBooking = async () => {
       if (!user) return;
+
       try {
         const { data, error } = await supabase
           .from("accommodation")
@@ -54,11 +55,23 @@ const Accommodation = () => {
           .maybeSingle();
 
         if (error) throw error;
+
         if (data) {
-          setIsSuccess(true);
+          setFormData({
+            fullName: data.fullName || "",
+            email: data.email || user.email || "",
+            phone: data.phone || "",
+            gender: data.gender || "",
+            city: data.city || "",
+            collegeName: data.college_name || "",
+            healthIssues: data.health_issues || "",
+            selectedDays: data.selected_days || [],
+          });
+          setAmount((data.selected_days?.length || 0) * 100);
+          setHasExistingBooking(true);
         }
       } catch (err) {
-        console.error("Error checking accommodation:", err);
+        console.error("Error fetching accommodation:", err);
       } finally {
         setIsChecking(false);
       }
@@ -67,6 +80,7 @@ const Accommodation = () => {
     checkExistingBooking();
   }, [user]);
 
+  // 🧠 Pre-fill email if logged in
   useEffect(() => {
     if (user?.email) {
       setFormData((prev) => ({ ...prev, email: user.email }));
@@ -83,7 +97,7 @@ const Accommodation = () => {
       if (selected.has(dayId)) selected.delete(dayId);
       else selected.add(dayId);
       const updated = Array.from(selected);
-      setTotalCost(updated.length * 100);
+      setAmount(updated.length * 100);
       return { ...prev, selectedDays: updated };
     });
   };
@@ -120,10 +134,11 @@ const Accommodation = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!validateForm()) return;
-
     setIsSubmitting(true);
+
     try {
       const daysCount = formData.selectedDays.length;
+
       const { error } = await supabase.from("accommodation").insert([
         {
           user_id: user.id,
@@ -135,13 +150,12 @@ const Accommodation = () => {
           college_name: formData.collegeName,
           health_issues: formData.healthIssues,
           selected_days: formData.selectedDays,
-          total_cost: totalCost,
+          amount: amount,
         },
       ]);
 
       if (error) throw error;
 
-      setIsSuccess(true);
       toast({
         title: "Accommodation Booked!",
         description: `You’ve booked accommodation for ${daysCount} ${
@@ -149,6 +163,7 @@ const Accommodation = () => {
         }. Our team will contact you soon.`,
       });
 
+      setHasExistingBooking(true);
       setTimeout(() => navigate("/"), 4000);
     } catch (err) {
       console.error(err);
@@ -162,11 +177,11 @@ const Accommodation = () => {
     }
   };
 
-  // 🚫 Show sign-in prompt if user not signed in
+  // 🚫 Not signed in
   if (!user) {
     return (
       <motion.div
-        className="min-h-screen flex items-center justify-center bg-background px-4"
+        className="min-h-screen flex items-center justify-center bg-background px-4 pt-[120px] pb-20"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
       >
@@ -195,11 +210,11 @@ const Accommodation = () => {
     );
   }
 
-  // ⏳ While checking previous booking
+  // ⏳ While checking
   if (isChecking) {
     return (
       <motion.div
-        className="min-h-screen flex items-center justify-center bg-background text-lg text-muted-foreground"
+        className="min-h-screen flex items-center justify-center bg-background text-lg text-muted-foreground pt-[120px] pb-20"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
       >
@@ -208,11 +223,11 @@ const Accommodation = () => {
     );
   }
 
-  // ✅ Show success animation if already booked or just booked
-  if (isSuccess) {
+  // ✅ If user already booked — show read-only view
+  if (hasExistingBooking) {
     return (
       <motion.div
-        className="min-h-screen flex flex-col items-center justify-center text-center bg-background px-4"
+        className="min-h-screen flex flex-col items-center justify-center text-center bg-background px-4 pt-[120px] pb-20"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
       >
@@ -224,20 +239,45 @@ const Accommodation = () => {
         >
           <CheckCircle2 className="text-green-500 w-24 h-24" />
         </motion.div>
-        <h2 className="text-3xl font-semibold mb-2">Booking Successful!</h2>
+        <h2 className="text-3xl font-semibold mb-2">Accommodation Details</h2>
         <p className="text-muted-foreground text-lg mb-6">
-          Our team will contact you soon regarding your accommodation.
+          You have already booked your accommodation. Here are your details:
         </p>
-        <Button onClick={() => navigate("/")} className="px-6 py-3 text-lg">
+
+        <Card className="max-w-md w-full text-left p-6 glass-card border border-white/10">
+          <CardContent className="space-y-3 text-base">
+            <p><strong>Full Name:</strong> {formData.fullName}</p>
+            <p><strong>Email:</strong> {formData.email}</p>
+            <p><strong>Phone:</strong> {formData.phone}</p>
+            <p><strong>Gender:</strong> {formData.gender}</p>
+            <p><strong>City:</strong> {formData.city}</p>
+            <p><strong>College Name:</strong> {formData.collegeName}</p>
+            {formData.healthIssues && (
+              <p><strong>Health Issues:</strong> {formData.healthIssues}</p>
+            )}
+            <div>
+              <strong>Selected Days:</strong>
+              <ul className="list-disc ml-6 mt-1 text-muted-foreground">
+                {formData.selectedDays.map((id) => {
+                  const day = eventDays.find((d) => d.id === id);
+                  return <li key={id}>{day?.label}</li>;
+                })}
+              </ul>
+            </div>
+            <p className="font-semibold text-primary">Amount: ₹{amount}</p>
+          </CardContent>
+        </Card>
+
+        <Button onClick={() => navigate("/")} className="mt-6 px-6 py-3 text-lg">
           Go to Home
         </Button>
       </motion.div>
     );
   }
 
-  // ✅ Main form view
+  // 🧾 Show form for new users
   return (
-    <motion.div className="min-h-screen bg-background py-20">
+    <motion.div className="min-h-screen bg-background pt-[120px] pb-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div className="max-w-2xl mx-auto">
           <div className="text-center mb-12">
@@ -259,6 +299,7 @@ const Accommodation = () => {
             </CardHeader>
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-6">
+                {/* Input Fields */}
                 <div>
                   <Label htmlFor="fullName">Full Name *</Label>
                   <Input
@@ -369,7 +410,7 @@ const Accommodation = () => {
 
                   {formData.selectedDays.length > 0 && (
                     <p className="text-sm text-muted-foreground mt-2">
-                      Total Cost: ₹{totalCost}
+                      Amount: ₹{amount}
                     </p>
                   )}
                 </div>
