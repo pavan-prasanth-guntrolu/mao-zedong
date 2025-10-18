@@ -160,23 +160,7 @@
     "status": "Accepted",
     "mode": "Online"
   },
-  {
-    "id": 13,
-    "name": "Kiran Kaur",
-    "title": "IBM Quantum Representative",
-    "company": "IBM Quantum",
-    "bio": "Representative from IBM Quantum involved in outreach and academic engagement.",
-    "image": "/images/kiran.jpg",
-    "twitter": "",
-    "linkedin": "kiran-kaur-raina-b2922622a",
-    "talk": {
-      "title": "To be announced",
-      "abstract": "IBM Quantum initiatives and academic collaborations in India.",
-      "time": "To be announced",
-      "date": "To be announced"
-    },
-    "status": "Accepted"
-  },
+
   {
     "id": 14,
     "name": "Janani",

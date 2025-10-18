@@ -28,8 +28,9 @@ const Team = () => {
               Our <span className="text-gradient">Team</span>
             </h1>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Meet the dedicated organizers, designers, developers, and mentors who make
-              Qiskit Fall Fest 2025 at RGUKT Srikakulam an unforgettable experience.
+              Meet the dedicated organizers, designers, developers, and mentors
+              who make Qiskit Fall Fest 2025 at RGUKT Srikakulam an
+              unforgettable experience.
             </p>
           </motion.div>
         </div>
@@ -63,7 +64,7 @@ const Team = () => {
                             <img
                               src={member.image}
                               alt={member.name}
-                              className="w-32 h-32 rounded-full object-cover"
+                              className="w-40 h-40 rounded-full object-cover"
                               loading="lazy"
                             />
                           ) : (
@@ -100,7 +101,9 @@ const Team = () => {
                               target="_blank"
                               rel="noopener noreferrer"
                               className={`w-8 h-8 flex items-center justify-center rounded-full bg-blue-100 text-blue-700 hover:bg-blue-200 transition ${
-                                member.linkedin ? "" : "opacity-50 cursor-not-allowed"
+                                member.linkedin
+                                  ? ""
+                                  : "opacity-50 cursor-not-allowed"
                               }`}
                               aria-disabled={!member.linkedin}
                               onClick={(event) => {
@@ -118,7 +121,9 @@ const Team = () => {
                               target="_blank"
                               rel="noopener noreferrer"
                               className={`w-8 h-8 flex items-center justify-center rounded-full bg-pink-100 text-pink-500 hover:bg-pink-200 transition ${
-                                member.instagram ? "" : "opacity-50 cursor-not-allowed"
+                                member.instagram
+                                  ? ""
+                                  : "opacity-50 cursor-not-allowed"
                               }`}
                               aria-disabled={!member.instagram}
                               onClick={(event) => {
@@ -142,10 +147,12 @@ const Team = () => {
                         {member.role && member.study && (
                           <div className="flex flex-col gap-2">
                             <p className="text-sm text-muted-foreground">
-                              <span className="font-medium">Role:</span> {member.role}
+                              <span className="font-medium">Role:</span>{" "}
+                              {member.role}
                             </p>
                             <p className="text-sm text-muted-foreground">
-                              <span className="font-medium">Department:</span> {member.study}
+                              <span className="font-medium">Department:</span>{" "}
+                              {member.study}
                             </p>
                           </div>
                         )}
