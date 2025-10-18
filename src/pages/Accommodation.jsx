@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
+import { CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -12,6 +13,7 @@ import { useAuth } from "@/components/AuthProvider";
 const Accommodation = () => {
   const { user } = useAuth();
   const navigate = useNavigate();
+  const location = useLocation();
   const { toast } = useToast();
 
   const [formData, setFormData] = useState({
@@ -20,11 +22,11 @@ const Accommodation = () => {
     phone: "",
     selectedDays: [],
   });
-
   const [totalCost, setTotalCost] = useState(0);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [isChecking, setIsChecking] = useState(true);
 
-  // ✅ Event days (21–27 Oct 2025)
   const eventDays = [
     { id: 1, date: "2025-10-21", label: "Day 1 – Oct 21 (Tue)" },
     { id: 2, date: "2025-10-22", label: "Day 2 – Oct 22 (Wed)" },
@@ -35,7 +37,32 @@ const Accommodation = () => {
     { id: 7, date: "2025-10-27", label: "Day 7 – Oct 27 (Mon)" },
   ];
 
-  // Autofill email
+  // ✅ If user already booked, show success
+  useEffect(() => {
+    const checkExistingBooking = async () => {
+      if (!user) return;
+      try {
+        const { data, error } = await supabase
+          .from("accommodation")
+          .select("*")
+          .eq("user_id", user.id)
+          .maybeSingle();
+
+        if (error) throw error;
+        if (data) {
+          // user already booked — show success animation
+          setIsSuccess(true);
+        }
+      } catch (err) {
+        console.error("Error checking accommodation:", err);
+      } finally {
+        setIsChecking(false);
+      }
+    };
+
+    checkExistingBooking();
+  }, [user]);
+
   useEffect(() => {
     if (user?.email) {
       setFormData((prev) => ({ ...prev, email: user.email }));
@@ -51,7 +78,6 @@ const Accommodation = () => {
       const selected = new Set(prev.selectedDays);
       if (selected.has(dayId)) selected.delete(dayId);
       else selected.add(dayId);
-
       const updated = Array.from(selected);
       setTotalCost(updated.length * 100);
       return { ...prev, selectedDays: updated };
@@ -61,7 +87,6 @@ const Accommodation = () => {
   const validateForm = () => {
     const required = ["fullName", "email", "phone"];
     const missing = required.filter((f) => !formData[f]);
-
     if (missing.length > 0) {
       toast({
         title: "Missing Information",
@@ -70,7 +95,6 @@ const Accommodation = () => {
       });
       return false;
     }
-
     if (formData.selectedDays.length === 0) {
       toast({
         title: "Select Days",
@@ -79,7 +103,6 @@ const Accommodation = () => {
       });
       return false;
     }
-
     return true;
   };
 
@@ -103,14 +126,16 @@ const Accommodation = () => {
 
       if (error) throw error;
 
+      setIsSuccess(true); // ✅ show success animation
       toast({
         title: "Accommodation Booked!",
         description: `You’ve booked accommodation for ${daysCount} ${
           daysCount === 1 ? "day" : "days"
-        }. Total cost: ₹${totalCost}.`,
+        }. Our team will contact you soon.`,
       });
 
-      navigate("/");
+      // Optional redirect after few seconds
+      setTimeout(() => navigate("/"), 4000);
     } catch (err) {
       console.error(err);
       toast({
@@ -123,14 +148,92 @@ const Accommodation = () => {
     }
   };
 
+  // 🚫 Show sign-in prompt if user not signed in
+  if (!user) {
+    return (
+      <motion.div
+        className="min-h-screen flex items-center justify-center bg-background px-4"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+      >
+        <Card className="max-w-md text-center p-6 glass-card border border-white/10">
+          <CardHeader>
+            <CardTitle className="text-2xl font-semibold mb-2">
+              Sign In Required
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-muted-foreground mb-6">
+              You need to sign in to book your accommodation.
+            </p>
+            <Button
+              onClick={() => {
+                localStorage.setItem("redirectAfterLogin", location.pathname);
+                navigate("/login");
+              }}
+              className="w-full py-3 text-lg font-semibold rounded-lg bg-primary text-white hover:scale-[1.02] transition-all duration-200"
+            >
+              Sign In
+            </Button>
+          </CardContent>
+        </Card>
+      </motion.div>
+    );
+  }
+
+  // ⏳ While checking previous booking
+  if (isChecking) {
+    return (
+      <motion.div
+        className="min-h-screen flex items-center justify-center bg-background text-lg text-muted-foreground"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+      >
+        Checking your booking status...
+      </motion.div>
+    );
+  }
+
+  // ✅ Show success animation if already booked or just booked
+  if (isSuccess) {
+    return (
+      <motion.div
+        className="min-h-screen flex flex-col items-center justify-center text-center bg-background px-4"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+      >
+        <motion.div
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ type: "spring", stiffness: 100, damping: 10 }}
+          className="mb-6"
+        >
+          <CheckCircle2 className="text-green-500 w-24 h-24" />
+        </motion.div>
+        <h2 className="text-3xl font-semibold mb-2">Booking Successful!</h2>
+        <p className="text-muted-foreground text-lg mb-6">
+          Our team will contact you soon regarding your accommodation.
+        </p>
+        <Button onClick={() => navigate("/")} className="px-6 py-3 text-lg">
+          Go to Home
+        </Button>
+      </motion.div>
+    );
+  }
+
+  // ✅ Main form view
   return (
     <motion.div className="min-h-screen bg-background py-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div className="max-w-2xl mx-auto">
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold mb-4">Accommodation Booking</h1>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-lg text-muted-foreground mb-3">
               Select the days you’d like accommodation for. Each day costs ₹100.
+            </p>
+            <p className="text-sm text-yellow-400 font-medium">
+              ⚠️ Limited slots available — bookings are on a first-come,
+              first-served basis.
             </p>
           </div>
 

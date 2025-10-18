@@ -25,6 +25,7 @@ const NAVIGATION = [
       { name: "Schedule", href: "/schedule" },
       { name: "Workshops", href: "/workshops" },
       { name: "Hackathon", href: "/hackathon" },
+      { name: "Refer", href: "/refer" },
       { name: "Guest Speaker", href: "/guest-speaker" }, // ✅ moved here
       { name: "Ambassadors", href: "/ambassadors" },
       { name: "Apply as Ambassador", href: "/ambassador" },
@@ -40,7 +41,7 @@ const NAVIGATION = [
   { name: "Sponsors", href: "/sponsors" },
   { name: "Our Team", href: "/team" },
   { name: "Supporters", href: "/supporters" },
-  { name: "Refer", href: "/refer" },
+  { name: "Accommodation", href: "/accommodation" },
   {
     name: "About Us",
     dropdown: [
@@ -141,7 +142,7 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav
-            className="hidden lg:flex items-center space-x-8"
+            className="hidden lg:flex items-center flex-wrap justify-end gap-x-6 gap-y-2"
             aria-label="Main navigation"
           >
             {NAVIGATION.map((item) =>
