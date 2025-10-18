@@ -12,132 +12,39 @@
           {
             "id": 1,
             "time": "9:00 AM - 10:00 AM",
-            "title": "Registration & Welcome",
-            "type": "registration",
+            "title": "Inaugural Ceremony",
+            "type": "ceremony",
             "location": "Main Auditorium",
-            "description": "Participant check-in, distribution of welcome kits, networking over refreshments.",
+            "description": "Formal inauguration of Qiskit Fall Fest RGUKT 2025 with welcome address and keynotes.",
             "level": "All",
-            "prerequisites": [],
-            "resources": ["Event Handbook", "Hackathon Guidelines"],
             "speakers": [],
-            "notes": "Mandatory for all participants."
+            "mode": "In-Person"
           },
           {
             "id": 2,
             "time": "10:00 AM - 10:30 AM",
-            "title": "Opening Ceremony",
-            "type": "ceremony",
+            "title": "Opening Keynote",
+            "type": "keynote",
             "location": "Main Auditorium",
-            "description": "Formal inauguration with keynote messages and global connection to Qiskit Fall Fest.",
+            "description": "Opening remarks from IBM Quantum India Lead on the roadmap of Quantum India.",
             "level": "All",
-            "prerequisites": [],
-            "resources": ["https://qiskit.org/events/fall-fest/"],
-            "speakers": ["RGUKT Chancellor", "IBM Quantum Representative"],
-            "subSessions": [
-              {
-                "id": "2a",
-                "time": "10:00 AM - 10:10 AM",
-                "title": "Welcome by RGUKT Leadership",
-                "description": "Opening remarks and introduction by university leadership."
-              },
-              {
-                "id": "2b",
-                "time": "10:10 AM - 10:20 AM",
-                "title": "IBM Quantum Keynote",
-                "description": "Keynote from IBM Quantum representative on global roadmap."
-              },
-              {
-                "id": "2c",
-                "time": "10:20 AM - 10:30 AM",
-                "title": "Qiskit Fall Fest Global Connection",
-                "description": "Live connection to international community of Qiskit events."
-              }
-            ]
+            "speakers": [
+              "Dr. L. Venkata Subramaniam – IBM Quantum India Lead"
+            ],
+            "mode": "In-Person"
           },
           {
             "id": 3,
-            "time": "10:30 AM - 12:00 PM",
-            "title": "Keynote",
-            "type": "keynote",
-            "location": "Main Auditorium",
-            "description": "A keynote introducing the real-world impact of quantum computing across industries and academia.",
-            "level": "All",
-            "prerequisites": ["Basic awareness of computers"],
-            "resources": ["https://research.ibm.com/quantum"],
-            "speakers": ["Dr. L. V. Subramaniam (IBM Quantum)"],
-            "notes": "Recommended for all hackathon participants."
-          },
-          {
-            "id": 4,
-            "time": "1:00 PM - 2:30 PM",
-            "title": "Panel",
-            "type": "panel",
-            "location": "Main Auditorium",
-            "description": "Panel discussion highlighting quantum research in India and the roadmap for innovation.",
-            "level": "All",
-            "prerequisites": [],
-            "resources": ["https://dst.gov.in/national-quantum-mission"],
-            "speakers": [
-              "Faculty - RGUKT Nuzvid",
-              "Faculty - RGUKT RK Valley",
-              "Industry Expert (TCS Quantum Lab)"
-            ],
-            "notes": "Interactive Q&A included."
-          },
-          {
-            "id": 5,
-            "time": "2:45 PM - 4:15 PM",
-            "title": "Lecture",
-            "type": "workshop",
-            "location": "Main Auditorium",
-            "description": "Hands-on introduction to IBM Quantum cloud and Qiskit framework.",
-            "level": "Beginner",
-            "prerequisites": ["Basic Python"],
-            "resources": [
-              "https://qiskit.org/",
-              "https://quantum-computing.ibm.com/lab"
-            ],
-            "speakers": ["IBM Quantum Educator"],
-            "notes": "Bring laptops with Python installed."
-          },
-          {
-            "id": 6,
             "time": "4:30 PM - 5:30 PM",
-            "title": "Community Meetup - RGUKT Quantum Club Launch",
-            "type": "ceremony",
+            "title": "Guest Speaker Session",
+            "type": "lecture",
             "location": "Main Auditorium",
-            "description": "Launch of RGUKT Quantum Club with a vision statement and first student chapter introduction.",
+            "description": "Talk by Robert Loredo on quantum education and innovation strategies.",
             "level": "All",
-            "prerequisites": [],
-            "resources": [],
-            "speakers": ["Student Coordinators", "Faculty Advisors"],
-            "notes": "Membership registration opens."
-          },
-          {
-            "id": 7,
-            "time": "6:00 PM - 7:00 PM",
-            "title": "Campus Showcase",
-            "type": "presentation",
-            "location": "Main Auditorium",
-            "description": "Each RGUKT campus presents their quantum specialization areas and student projects.",
-            "level": "All",
-            "prerequisites": [],
-            "resources": [],
-            "speakers": ["Campus Student Teams"],
-            "notes": "Part of inter-campus collaboration initiative."
-          },
-          {
-            "id": 8,
-            "time": "7:00 PM - 8:00 PM",
-            "title": "Networking & Cultural Program",
-            "type": "social",
-            "location": "Main Auditorium",
-            "description": "Evening networking session with cultural performances blending arts and science.",
-            "level": "All",
-            "prerequisites": [],
-            "resources": [],
-            "speakers": ["Student Performers"],
-            "notes": "Open to all participants and faculty."
+            "speakers": [
+              "Robert Loredo – CEO / Founder, Entangled Solutions Group"
+            ],
+            "mode": "Virtual"
           }
         ]
       },
@@ -146,56 +53,56 @@
         "day": "Day 2",
         "sessions": [
           {
-            "id": 9,
+            "id": 4,
             "time": "9:00 AM - 10:00 AM",
             "title": "Guest Lecture",
-            "type": "",
+            "type": "lecture",
             "location": "Main Auditorium",
-            "description": "",
-            "level": "",
-            "prerequisites": [],
-            "resources": [],
-            "speakers": [],
-            "notes": ""
+            "description": "Project managers and Qiskit programmers will work together on the next decade of quantum projects.",
+            "level": "All",
+            "speakers": [
+              "Gregory Skulmoski – Associate Professor, Faculty of Society & Design, Bond University"
+            ],
+            "mode": "Virtual"
           },
           {
-            "id": 10,
-            "time": "10:00 AM - 11:00 AM",
+            "id": 5,
+            "time": "11:00 AM - 12:00 PM",
             "title": "Guest Lecture",
-            "type": "",
+            "type": "lecture",
             "location": "Main Auditorium",
-            "description": "",
-            "level": "",
-            "prerequisites": [],
-            "resources": [],
-            "speakers": [],
-            "notes": ""
+            "description": "Insights into IBM Quantum research and development.",
+            "level": "All",
+            "speakers": [
+              "Dr. Ritajit Majumdar – Research Scientist, IBM Quantum"
+            ],
+            "mode": "In-Person"
           },
           {
-            "id": 11,
-            "time": "11:00 AM - 12:00 AM",
+            "id": 6,
+            "time": "11:00 AM - 12:00 PM",
             "title": "Guest Lecture",
-            "type": "",
+            "type": "lecture",
             "location": "Main Auditorium",
-            "description": "",
-            "level": "",
-            "prerequisites": [],
-            "resources": [],
-            "speakers": [],
-            "notes": ""
+            "description": "Session on cryptography and quantum security foundations.",
+            "level": "All",
+            "speakers": [
+              "Dr. Goutam Paul – Professor, ISI Kolkata"
+            ],
+            "mode": "Virtual"
           },
           {
-            "id": 12,
-            "time": "02:00 PM - 6:00 PM",
-            "title": "Workshop",
-            "type": "",
+            "id": 7,
+            "time": "2:00 PM - 5:00 PM",
+            "title": "Day-1 Workshop: Hands-on Qiskit",
+            "type": "workshop",
             "location": "Main Auditorium",
-            "description": "",
-            "level": "",
-            "prerequisites": [],
-            "resources": [],
-            "speakers": [],
-            "notes": ""
+            "description": "Practical, hands-on workshop on Qiskit and IBM Quantum Lab.",
+            "level": "Beginner",
+            "speakers": [
+              "Dr. Jnan Yalla – CTO, DataTeach AI; Ex R&D Scientist, DRDO"
+            ],
+            "mode": "In-Person"
           }
         ]
       },
@@ -204,56 +111,64 @@
         "day": "Day 3",
         "sessions": [
           {
-            "id": 9,
+            "id": 8,
             "time": "9:00 AM - 10:00 AM",
-            "title": "Guest Lecture",
-            "type": "",
+            "title": "Guest Speaker",
+            "type": "lecture",
             "location": "Main Auditorium",
-            "description": "",
-            "level": "",
-            "prerequisites": [],
-            "resources": [],
-            "speakers": [],
-            "notes": ""
+            "description": "Qiskit 1 vs 1 discussion and live coding demo.",
+            "speakers": [
+              "Janani A – IBM Quantum Support"
+            ],
+            "mode": "In-Person"
+          },
+          {
+            "id": 9,
+            "time": "10:00 AM - 11:00 AM",
+            "title": "Guest Lecture",
+            "type": "lecture",
+            "location": "Main Auditorium",
+            "description": "Quantum Agentic AI via Qiskit in Healthcare.",
+            "speakers": [
+              "Sreenivasa Pisupati – Quantum Specialist & Advisor, AI Delivery & Architect"
+            ],
+            "mode": "In-Person"
           },
           {
             "id": 10,
-            "time": "10:00 AM - 11:00 AM",
+            "time": "11:00 AM - 12:00 PM",
             "title": "Guest Lecture",
-            "type": "",
+            "type": "lecture",
             "location": "Main Auditorium",
-            "description": "",
-            "level": "",
-            "prerequisites": [],
-            "resources": [],
-            "speakers": [],
-            "notes": ""
+            "description": "Discussion on quantum startups and innovation.",
+            "speakers": [
+              "Mr. Nixon Patel – Founder & CEO, Qulabz"
+            ],
+            "mode": "Virtual"
           },
           {
             "id": 11,
-            "time": "11:00 AM - 12:00 AM",
-            "title": "Guest Lecture",
-            "type": "",
+            "time": "2:00 PM - 5:00 PM",
+            "title": "Day-2 Workshop: Hands-on Qiskit",
+            "type": "workshop",
             "location": "Main Auditorium",
-            "description": "",
-            "level": "",
-            "prerequisites": [],
-            "resources": [],
-            "speakers": [],
-            "notes": ""
+            "description": "Interactive session on quantum circuits using Qiskit.",
+            "speakers": [
+              "Dr. Jnan Yalla – CTO, DataTeach AI"
+            ],
+            "mode": "In-Person"
           },
           {
             "id": 12,
-            "time": "02:00 PM - 6:00 PM",
-            "title": "Workshop",
-            "type": "",
+            "time": "5:00 PM - 6:00 PM",
+            "title": "Guest Speaker",
+            "type": "lecture",
             "location": "Main Auditorium",
-            "description": "",
-            "level": "",
-            "prerequisites": [],
-            "resources": [],
-            "speakers": [],
-            "notes": ""
+            "description": "Quantum Machine Learning & Applications.",
+            "speakers": [
+              "Prof. Elias F. Combarro – Associate Professor, University of Oviedo, Spain"
+            ],
+            "mode": "Virtual"
           }
         ]
       },
@@ -262,56 +177,64 @@
         "day": "Day 4",
         "sessions": [
           {
-            "id": 9,
+            "id": 13,
             "time": "9:00 AM - 10:00 AM",
-            "title": "Guest Lecture",
-            "type": "",
+            "title": "Guest Speaker",
+            "type": "lecture",
             "location": "Main Auditorium",
-            "description": "",
-            "level": "",
-            "prerequisites": [],
-            "resources": [],
-            "speakers": [],
-            "notes": ""
+            "description": "Quantum Algorithms (Basics to Advanced).",
+            "speakers": [
+              "Soumya Ranjan Swain – IBM Quantum Ambassador"
+            ],
+            "mode": "In-Person"
           },
           {
-            "id": 10,
+            "id": 14,
             "time": "10:00 AM - 11:00 AM",
             "title": "Guest Lecture",
-            "type": "",
+            "type": "lecture",
             "location": "Main Auditorium",
-            "description": "",
-            "level": "",
-            "prerequisites": [],
-            "resources": [],
-            "speakers": [],
-            "notes": ""
+            "description": "Quantum Computing Engineering insights.",
+            "speakers": [
+              "Tilock Sadhukhan – Quantum Computing Engineer, CDAC Bangalore"
+            ],
+            "mode": "In-Person"
           },
           {
-            "id": 11,
-            "time": "11:00 AM - 12:00 AM",
+            "id": 15,
+            "time": "11:00 AM - 12:00 PM",
             "title": "Guest Lecture",
-            "type": "",
+            "type": "lecture",
             "location": "Main Auditorium",
-            "description": "",
-            "level": "",
-            "prerequisites": [],
-            "resources": [],
-            "speakers": [],
-            "notes": ""
+            "description": "Recent research updates from IBM Quantum.",
+            "speakers": [
+              "Col. Sai – IBM Quantum Research Scientist"
+            ],
+            "mode": "In-Person"
           },
           {
-            "id": 12,
-            "time": "02:00 PM - 6:00 PM",
-            "title": "Workshop",
-            "type": "",
+            "id": 16,
+            "time": "2:00 PM - 5:00 PM",
+            "title": "Day-3 Workshop: Hands-on Qiskit",
+            "type": "workshop",
             "location": "Main Auditorium",
-            "description": "",
-            "level": "",
-            "prerequisites": [],
-            "resources": [],
-            "speakers": [],
-            "notes": ""
+            "description": "Advanced Qiskit workshop by Dr. Jnan Yalla.",
+            "speakers": [
+              "Dr. Jnan Yalla – CTO, DataTeach AI; Ex R&D Scientist, DRDO"
+            ],
+            "mode": "In-Person"
+          },
+          {
+            "id": 17,
+            "time": "5:00 PM - 6:00 PM",
+            "title": "Workshop: QSim Hands-on Demonstration",
+            "type": "workshop",
+            "location": "Main Auditorium",
+            "description": "Demonstration of indigenous Quantum Computer Simulator Toolkit (QSim).",
+            "speakers": [
+              "Abijeeth Teja – CDAC Hyderabad"
+            ],
+            "mode": "In-Person"
           }
         ]
       },
@@ -320,56 +243,40 @@
         "day": "Day 5",
         "sessions": [
           {
-            "id": 17,
-            "time": "9:00 AM - 10:30 AM",
-            "title": "Hackathon Rules & Orientation",
-            "type": "ceremony",
-            "location": "Main Auditorium",
-            "description": "Introduction to hackathon guidelines, rules, and judging criteria.",
-            "level": "All",
-            "prerequisites": [],
-            "resources": ["Hackathon Handbook", "GitHub Repo Templates"],
-            "speakers": ["Organizing Committee", "IBM Mentor Team"],
-            "notes": "Mandatory for all hackathon participants."
-          },
-          {
-            "id": 27,
-            "time": "11:00 AM - 12:30 PM",
-            "title": "Team Formation & Mentorship Connect",
-            "type": "social",
-            "location": "Breakout Rooms",
-            "description": "Participants form teams, choose challenge tracks, and meet assigned mentors.",
-            "level": "All",
-            "prerequisites": ["Interest in hackathon participation"],
-            "resources": [],
-            "speakers": ["Student Coordinators", "IBM Mentors"],
-            "notes": "Teams must have 3–5 members."
-          },
-          {
-            "id": 28,
-            "time": "12:00 PM - 11:59 PM",
-            "title": "Hackathon (Continuous Sprint)",
-            "type": "hackathon",
-            "location": "Computer Labs & Online IBM Quantum Lab",
-            "description": "Hackathon begins and runs continuously.",
-            "level": "All",
-            "prerequisites": [],
-            "resources": ["IBM Quantum Lab", "Hackathon GitHub Repositories"],
-            "speakers": ["Assigned Mentors"],
-            "notes": "Hackathon runs from Day 5 12:00 PM to Day 7 12:00 PM."
-          },
-          {
-            "id": 29,
-            "time": "02:00 PM - 05:00 PM",
+            "id": 18,
+            "time": "10:00 AM - 11:00 AM",
             "title": "Guest Lecture",
-            "type": "",
+            "type": "lecture",
             "location": "Main Auditorium",
-            "description": "",
-            "level": "",
-            "prerequisites": [],
-            "resources": [],
-            "speakers": [],
-            "notes": ""
+            "description": "AI and Robotics perspectives on Quantum applications.",
+            "speakers": [
+              "Dr. Srikanth Thudumu – Director, Institute of Applied Artificial Intelligence and Robotics (IAAIR)"
+            ],
+            "mode": "Virtual"
+          },
+          {
+            "id": 19,
+            "time": "11:00 AM - 12:00 PM",
+            "title": "Guest Lecture",
+            "type": "lecture",
+            "location": "Main Auditorium",
+            "description": "Introduction to Qiskit advocacy and hackathon mentoring.",
+            "speakers": [
+              "Dr. Swathi Mummadi – IBM Quantum Qiskit Advocate, Associate Professor, BVRIT"
+            ],
+            "mode": "In-Person"
+          },
+          {
+            "id": 20,
+            "time": "2:00 PM - October 27, 2:00 PM",
+            "title": "48-Hour Hackathon",
+            "type": "hackathon",
+            "location": "Main Auditorium",
+            "description": "48-hour hackathon sprint: team-based project building and testing with mentor guidance.",
+            "speakers": [
+              "Dr. Swathi Mummadi – IBM Quantum Qiskit Advocate, BVRIT"
+            ],
+            "mode": "In-Person"
           }
         ]
       },
@@ -378,30 +285,38 @@
         "day": "Day 6",
         "sessions": [
           {
-            "id": 30,
-            "time": "12:00 AM - 11:59 PM",
-            "title": "Hackathon (Continuous Sprint)",
+            "id": 21,
+            "time": "All Day",
+            "title": "48-Hour Hackathon (Continued)",
             "type": "hackathon",
-            "location": "Computer Labs & Online IBM Quantum Lab",
-            "description": "Hackathon continues.",
-            "level": "All",
-            "prerequisites": [],
-            "resources": ["IBM Quantum Lab", "Hackathon GitHub Repositories"],
-            "speakers": ["Mentors", "Faculty Advisors"],
-            "notes": "Round-the-clock building and testing."
+            "location": "Main Auditorium",
+            "description": "Ongoing hackathon development and mentor checkpoints.",
+            "speakers": [],
+            "mode": "In-Person"
           },
           {
             "id": 22,
-            "time": "6:00 PM - 8:00 PM",
-            "title": "Late Night Debugging & Peer Networking",
-            "type": "social",
-            "location": "Common Hall",
-            "description": "Collaborative debugging session where teams help each other.",
-            "level": "All",
-            "prerequisites": [],
-            "resources": [],
-            "speakers": ["Student Peer Leaders"],
-            "notes": "Informal but highly encouraged."
+            "time": "2:00 PM - 3:00 PM",
+            "title": "Guest Speaker",
+            "type": "lecture",
+            "location": "Main Auditorium",
+            "description": "Quantum Optimization techniques and QML.",
+            "speakers": [
+              "Mr. Rahul Rana – TCS Research Scientist"
+            ],
+            "mode": "Virtual"
+          },
+          {
+            "id": 23,
+            "time": "2:30 PM - 3:30 PM",
+            "title": "Guest Speaker",
+            "type": "lecture",
+            "location": "Main Auditorium",
+            "description": "We don’t need to be physicists or mathematicians to start in Quantum Machine Learning.",
+            "speakers": [
+              "Frank C. Zickert PhD – Quantum Algorithm Engineer & Trainer"
+            ],
+            "mode": "Virtual"
           }
         ]
       },
@@ -410,60 +325,24 @@
         "day": "Day 7",
         "sessions": [
           {
-            "id": 31,
-            "time": "12:00 AM - 12:00 PM",
-            "title": "Hackathon (Final Sprint)",
-            "type": "hackathon",
-            "location": "Computer Labs & Online IBM Quantum Lab",
-            "description": "Final push before submissions.",
-            "level": "All",
-            "prerequisites": [],
-            "resources": ["IBM Quantum Lab", "Hackathon GitHub Repositories"],
-            "speakers": ["Mentors"],
-            "notes": "Hackathon ends at 12:00 PM."
-          },
-          {
-            "id": 23,
-            "time": "12:30 PM - 2:30 PM",
-            "title": "Final Hackathon Presentations",
-            "type": "presentation",
-            "location": "Main Auditorium",
-            "description": "Teams present their projects to judges and audience.",
-            "level": "All",
-            "prerequisites": ["Hackathon team participation"],
-            "resources": [],
-            "speakers": ["Hackathon Teams", "Judging Panel"],
-            "notes": "10-minute presentation per team."
-          },
-          {
             "id": 24,
-            "time": "2:30 PM - 3:30 PM",
-            "title": "Judging & Deliberation",
-            "type": "jury",
-            "location": "Closed Room",
-            "description": "Judges evaluate projects on innovation, implementation, and impact.",
-            "level": "Jury only",
-            "prerequisites": [],
-            "resources": ["Hackathon Judging Rubric"],
-            "speakers": ["Judging Panel"],
-            "notes": "Not open to participants."
+            "time": "12:00 AM - 2:00 PM",
+            "title": "Hackathon Finale & Judging",
+            "type": "hackathon",
+            "location": "Main Auditorium",
+            "description": "Final project presentations, judging, and evaluations.",
+            "speakers": [],
+            "mode": "In-Person"
           },
           {
             "id": 25,
             "time": "3:30 PM - 5:00 PM",
-            "title": "Closing Ceremony & Awards",
+            "title": "Valedictory Ceremony",
             "type": "ceremony",
             "location": "Main Auditorium",
-            "description": "Closing ceremony with keynote, prize distribution, and feedback session.",
-            "level": "All",
-            "prerequisites": [],
-            "resources": [],
-            "speakers": [
-              "RGUKT Vice Chancellor",
-              "IBM Guest of Honor",
-              "Winning Teams"
-            ],
-            "notes": "Certificates will be distributed."
+            "description": "Closing remarks, awards, and feedback session.",
+            "speakers": [],
+            "mode": "In-Person"
           }
         ]
       }
